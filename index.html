@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <link rel="icon" type="image/svg+xml" href="/vite.svg" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Vite + React</title>
+    <script is:inline>
+      const theme = (() => {
+        if (
+          typeof localStorage !== 'undefined' &&
+          localStorage.getItem('theme')
+        ) {
+          return localStorage.getItem('theme')
+        }
+
+        if (window.matchMedia('(prefers-color-scheme: dark)').matches) {
+          return 'dark'
+        }
+        return light
+      })()
+
+      if (theme === 'ligth') {
+        document.documentElemement.classList.remove('dark')
+      } else {
+        document.documentElemement.classList.add('dark')
+      }
+    </script>
+  </head>
+  <body
+    class="bg-[#e0def4] dark:bg-[#191724] text-[#191724] dark:text-[#e0def4] transition-colors duration-500"
+  >
+    <div id="root"></div>
+    <script type="module" src="/src/main.jsx"></script>
+    <script defer src="https://app.embed.im/snow.js"></script>
+  </body>
+</html>

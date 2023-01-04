@@ -1,0 +1,13 @@
+import React from "react";
+import { AiFillInstagram } from "react-icons/ai";
+
+export function Footer() {
+  return (
+    <footer className="w-full text-center mt-4 border grid items-center justify-center">
+      <h1>You can contact me on my social media</h1>
+      <div>
+        <AiFillInstagram />
+      </div>
+    </footer>
+  );
+}
