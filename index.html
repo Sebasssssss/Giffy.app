@@ -13,22 +13,20 @@
         ) {
           return localStorage.getItem('theme')
         }
-
         if (window.matchMedia('(prefers-color-scheme: dark)').matches) {
           return 'dark'
         }
-        return light
+        return 'light'
       })()
-
-      if (theme === 'ligth') {
-        document.documentElemement.classList.remove('dark')
+      if (theme === 'light') {
+        document.documentElement.classList.remove('dark')
       } else {
-        document.documentElemement.classList.add('dark')
+        document.documentElement.classList.add('dark')
       }
     </script>
   </head>
   <body
-    class="bg-[#e0def4] dark:bg-[#191724] text-[#191724] dark:text-[#e0def4] transition-colors duration-500"
+    class="bg-[#fff7ed] dark:bg-[#191724] text-[#191724] dark:text-[#e0def4] transition-colors duration-500"
   >
     <div id="root"></div>
     <script type="module" src="/src/main.jsx"></script>

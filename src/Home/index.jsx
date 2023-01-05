@@ -8,7 +8,7 @@ export default function Home() {
   const { gifs, loading } = useGifs()
   return (
     <>
-      <p className="max-w-3xl mx-auto py-5 mt-16">
+      <p className="max-w-3xl mx-auto p-5 mt-16">
         Im Sebastian and ive been into the tecnology world since im 13 years
         old. I started coding due to friends who would usually code and because
         i used to watch many videos of people coding, as Takuya Matsuyama.
