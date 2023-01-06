@@ -31,7 +31,7 @@ function SearchForm({ onSubmit }) {
           onClick={handleFocus}
           className={`${
             inputFocus ? '-translate-x-1' : 'translate-x-44'
-          } absolute cursor-pointer top-0.5 z-10 w-6 h-auto left-1 opacity-40 transition-transform duration-300`}
+          } absolute cursor-pointer top-0.5 z-10 w-6 h-auto left-1 opacity-40 transition-transform duration-100`}
         />
         <input
           placeholder="Search for a gif!"
@@ -42,8 +42,8 @@ function SearchForm({ onSubmit }) {
           className={`${
             inputFocus
               ? 'opacity-100 transition-all duration-500'
-              : 'opacity-0 transition-all duration-100'
-          } outline-none effect-1 md:px-7 py-1 text-sm bg-transparent border-b border-zinc-400 dark:border-zinc-700 dark:hover:bg-[#26233a]`}
+              : 'opacity-0 transition-all duration-75'
+          } outline-none effect-1 md:px-7 py-1 text-sm bg-transparent border-b border-[#908caa]/70`}
         />
       </form>
     </>

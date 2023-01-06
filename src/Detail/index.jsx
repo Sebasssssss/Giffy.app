@@ -3,12 +3,12 @@ import React from 'react'
 import Loader from '../components/Loader'
 
 export default function Detail({ params }) {
-  const { gif, loading } = useSingleGif({ id: params.id })
+  const { gif, isLoading } = useSingleGif({ id: params.id })
   if (!gif) return null
 
   return (
     <>
-      {loading ? (
+      {isLoading ? (
         <Loader />
       ) : (
         <div className="grid grid-cols-1 mt-24 gap-4 p-4">
