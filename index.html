@@ -4,29 +4,11 @@
     <meta charset="UTF-8" />
     <link rel="icon" type="image/svg+xml" href="/vite.svg" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Vite + React</title>
-    <script is:inline>
-      const theme = (() => {
-        if (
-          typeof localStorage !== 'undefined' &&
-          localStorage.getItem('theme')
-        ) {
-          return localStorage.getItem('theme')
-        }
-        if (window.matchMedia('(prefers-color-scheme: dark)').matches) {
-          return 'dark'
-        }
-        return 'light'
-      })()
-      if (theme === 'light') {
-        document.documentElement.classList.remove('dark')
-      } else {
-        document.documentElement.classList.add('dark')
-      }
-    </script>
+    <meta name="description" content="Vite" />
+    <title>.</title>
   </head>
   <body
-    class="bg-[#fff7ed] dark:bg-[#191724] text-[#191724] dark:text-[#e0def4] transition-colors duration-500"
+    class="bg-[#fff7ed] text-[#191724] transition-colors duration-500 dark:bg-[#191724] dark:text-[#e0def4]"
   >
     <div id="root"></div>
     <script type="module" src="/src/main.jsx"></script>

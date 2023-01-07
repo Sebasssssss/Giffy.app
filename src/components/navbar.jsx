@@ -16,11 +16,11 @@ export default function Navbar() {
   )
 
   return (
-    <header className="backdrop-blur-md p-2 fixed w-full z-10">
-      <nav className="max-w-3xl mx-auto flex justify-between">
+    <header className="fixed z-10 w-full p-2 backdrop-blur-md">
+      <nav className="mx-auto flex max-w-3xl justify-between">
         <Link
           to="/"
-          className="group text-lg p-2 font-semibold font-mplus inline-flex items-center gap-1.5 text-center tracking-tighter outline-none"
+          className="group inline-flex items-center gap-1.5 p-2 text-center font-mplus text-lg font-semibold tracking-tighter outline-none"
         >
           <Pawda /> Sebass <span>Rodriguez</span>
         </Link>

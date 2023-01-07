@@ -10,14 +10,14 @@ export default function TrendingSearches() {
   }, [])
   return (
     <>
-      <h1 className="font-bold text-xl my-4 underline underline-offset-4 decoration-zinc-400 dark:decoration-zinc-700 decoration-4">
+      <h1 className="my-4 text-xl font-bold underline decoration-zinc-400 decoration-4 underline-offset-4 dark:decoration-zinc-700">
         Trending Searches
       </h1>
       <div className="flex flex-wrap gap-2 p-4">
         {trends.map(singleTrend => (
           <Link
             to={`/search/${singleTrend}`}
-            className="border p-1 rounded border-slate-700/20 hover:-translate-y-0.5 hover:border-[#ebbcba] dark:hover:border-[#31748f] hover:shadow transition-all duration-200"
+            className="rounded border border-slate-700/20 p-1 transition-all duration-200 hover:-translate-y-0.5 hover:border-[#ebbcba] hover:shadow dark:hover:border-[#31748f]"
             key={singleTrend}
           >
             {singleTrend}

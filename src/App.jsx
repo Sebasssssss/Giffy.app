@@ -13,7 +13,7 @@ export default function App() {
     <>
       <Navbar />
       <Main />
-      <div className="max-w-3xl mx-auto">
+      <div className="mx-auto max-w-3xl">
         <Route path="/" component={Home} />
         <Route path="/search/:keyword" component={SearchResults} />
         <Route path="/gif/:id" component={Detail} />

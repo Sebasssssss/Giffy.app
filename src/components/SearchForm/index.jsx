@@ -9,6 +9,7 @@ function SearchForm({ onSubmit }) {
   const handleSubmit = e => {
     e.preventDefault()
     document.activeElement.blur()
+    setKeyword('')
     onSubmit({ keyword })
   }
 
@@ -22,16 +23,15 @@ function SearchForm({ onSubmit }) {
   }
 
   return (
-    <>
-      <form
-        onSubmit={handleSubmit}
-        className="relative rounded-md overflow-hidden"
-      >
+    <div>
+      <form onSubmit={handleSubmit} className="relative rounded-md">
         <FiSearch
           onClick={handleFocus}
           className={`${
-            inputFocus ? '-translate-x-1' : 'translate-x-44'
-          } absolute cursor-pointer top-0.5 z-10 w-6 h-auto left-1 opacity-40 transition-transform duration-100`}
+            inputFocus
+              ? '-translate-x-8 md:-translate-x-1'
+              : 'translate-x-32 md:translate-x-44'
+          } absolute top-0.5 left-1 z-10 h-auto w-6 cursor-pointer opacity-40 transition-transform duration-100`}
         />
         <input
           placeholder="Search for a gif!"
@@ -43,10 +43,10 @@ function SearchForm({ onSubmit }) {
             inputFocus
               ? 'opacity-100 transition-all duration-500'
               : 'opacity-0 transition-all duration-75'
-          } outline-none effect-1 md:px-7 py-1 text-sm bg-transparent border-b border-[#908caa]/70`}
+          } effect-1 border-b border-[#908caa]/70 bg-transparent py-1 text-sm outline-none md:px-7`}
         />
       </form>
-    </>
+    </div>
   )
 }
 
