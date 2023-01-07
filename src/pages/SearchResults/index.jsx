@@ -2,9 +2,9 @@ import React, { useEffect, useRef, useCallback } from 'react'
 import { useGifs } from '../../hooks/useGif'
 import useNearScreen from '../../hooks/useNearScreen'
 import debounce from 'just-debounce-it'
-import Loader from '../../components/Loader'
 import CardsAbout from '../../components/cardsAbout'
 import { Helmet } from 'react-helmet'
+import DoorDashFavorite from '../../components/Loading'
 
 export default function SearchResults({ params }) {
   const { keyword } = params
@@ -33,10 +33,10 @@ export default function SearchResults({ params }) {
         <option className="bg-zinc-900">A-Z</option>
         <option className="bg-zinc-900">Z-A</option>
       </select>
-      <h1 className="my-4 p-4 text-xl font-bold underline decoration-zinc-400 decoration-4 underline-offset-4 dark:decoration-zinc-700">
-        Searching for: {keyword}
+      <h1 className="my-4 px-4 text-xl font-bold underline decoration-zinc-400 decoration-4 underline-offset-4 dark:decoration-zinc-700">
+        Searching for: <span className="text-[#f6c177]">{keyword}</span>
       </h1>
-      {loading ? <Loader /> : <CardsAbout gifs={gifs} />}
+      {loading ? <DoorDashFavorite /> : <CardsAbout gifs={gifs} />}
       <div id="visor" ref={externalRef}></div>
     </>
   )
