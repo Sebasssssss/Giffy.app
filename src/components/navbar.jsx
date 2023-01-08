@@ -1,20 +1,11 @@
-import React, { useCallback } from 'react'
-import { Link, useLocation } from 'wouter'
+import React from 'react'
+import { Link } from 'wouter'
 import Pawda from './icons/pawda'
 import '../../public/global.css'
 import ToggleButton from './ToggleButton'
 import SearchForm from './SearchForm'
 
 export default function Navbar() {
-  const [path, pushLocation] = useLocation()
-
-  const handleSubmit = useCallback(
-    ({ keyword }) => {
-      pushLocation(`/search/${keyword}`)
-    },
-    [pushLocation]
-  )
-
   return (
     <header className="fixed z-10 w-full p-2 backdrop-blur-md">
       <nav className="mx-auto flex max-w-3xl justify-between">
@@ -25,7 +16,7 @@ export default function Navbar() {
           <Pawda /> Sebass <span>Rodriguez</span>
         </Link>
         <div className="inline-flex items-center gap-3">
-          <SearchForm onSubmit={handleSubmit} />
+          <SearchForm />
           <ToggleButton />
         </div>
       </nav>

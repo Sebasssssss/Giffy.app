@@ -1,16 +1,18 @@
 import React, { useState, useRef } from 'react'
 import { FiSearch } from 'react-icons/fi'
+import { useLocation } from 'wouter'
 
-function SearchForm({ onSubmit }) {
+function SearchForm() {
   const [keyword, setKeyword] = useState('')
   let [inputFocus, setInputFocus] = useState(false)
   const inputRef = useRef(null)
+  const [path, pushLocation] = useLocation()
 
   const handleSubmit = e => {
     e.preventDefault()
     document.activeElement.blur()
     setKeyword('')
-    onSubmit({ keyword })
+    pushLocation(`/search/${keyword}`)
   }
 
   const handleChange = e => {
