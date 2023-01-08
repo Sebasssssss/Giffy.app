@@ -4,15 +4,13 @@ import { Link } from 'wouter'
 function Gifs({ title, id, url }) {
   return (
     <>
-      <li className="text-center mb-4">
+      <li className="mb-4 text-center">
         <Link key={id} to={`/gif/${id}`}>
           <img
             src={url}
-            width="1440"
-            height="720"
             loading="lazy"
             decoding="async"
-            className="object-cover border border-[#ebbcba] dark:border-[#26233a] rounded-xl md:w-full sm:h-44 transition-all duration-300"
+            className="rounded-xl border border-[#ebbcba] object-cover transition-all duration-300 dark:border-[#26233a] sm:h-44 md:w-full"
           />
           <h1 className="text-xl font-bold">{title}</h1>
         </Link>
