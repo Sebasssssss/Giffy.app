@@ -1,4 +1,4 @@
-import useSingleGif from '../hooks/useSingleGif'
+import useSingleGif from '../../hooks/useSingleGif'
 import React from 'react'
 import { Helmet } from 'react-helmet'
 
