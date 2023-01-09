@@ -3,19 +3,22 @@ import video from '../assets/mainVideo.mp4'
 
 export default function Main() {
   return (
-    <main className="h-80 pt-[56px] relative">
-      <div className="flex flex-col gap-4 justify-center text-center py-5 absolute w-full bg-cover h-80 drop-shadow-lg shadow-black overflow-hidden">
+    <main className="relative h-80 pt-[56px]">
+      <div className="absolute flex h-80 w-full flex-col justify-center gap-4 overflow-hidden bg-cover py-5 text-center shadow-black drop-shadow-lg">
         <video
-          className="absolute opacity-30 w-full h-[550px] md:h-full object-cover"
+          className="absolute h-[550px] w-full object-cover opacity-30 md:h-full"
           src={video}
           playsInline
           autoPlay
           muted
           loop
         />
-        <h1 className="text-sm z-10 uppercase">Welcome to the</h1>
-        <h1 className="text-4xl font-medium font-mplus z-10">
-          Giffy <span className="text-[#f6c177] dark:text-[#31748f] transition-colors duration-500">app</span>
+        <h1 className="z-10 text-sm uppercase">Welcome to</h1>
+        <h1 className="z-10 font-mplus text-4xl font-medium">
+          Giffy{' '}
+          <span className="text-[#f6c177] transition-colors duration-500 dark:text-[#31748f]">
+            app
+          </span>
         </h1>
       </div>
     </main>

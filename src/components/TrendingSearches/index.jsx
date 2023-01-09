@@ -5,12 +5,12 @@ import useNearScreen from '../../hooks/useNearScreen'
 const TrendingSearches = React.lazy(() => import('./TrendingSearches'))
 
 export default function LazyTrending() {
-  const { isNearScreen, fromRef } = useNearScreen({ distance: '100px' })
+  const { isNearScreen, fromRef } = useNearScreen({ distance: '0px' })
 
   return (
-    <div className="min-h-screen" ref={fromRef}>
+    <div ref={fromRef}>
       <Suspense falback={<Loader />}>
-        {isNearScreen ? <TrendingSearches /> : null}
+        {isNearScreen ? <TrendingSearches /> : <Loader />}
       </Suspense>
     </div>
   )

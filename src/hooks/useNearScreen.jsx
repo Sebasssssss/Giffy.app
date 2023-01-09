@@ -1,7 +1,7 @@
 import { useState, useRef, useEffect } from 'react'
 
 export default function useNearScreen({
-  distance = '200px',
+  distance = '100px',
   externalRef,
   once = true
 } = {}) {
@@ -24,7 +24,7 @@ export default function useNearScreen({
     }
 
     Promise.resolve(
-      typeof IntersectionObserver != 'undefined'
+      typeof IntersectionObserver !== 'undefined'
         ? IntersectionObserver
         : import('intersection-observer')
     ).then(() => {
@@ -32,7 +32,7 @@ export default function useNearScreen({
         rootMargin: distance
       })
 
-      observer.observe(element)
+      if (element) observer.observe(element)
     })
     return () => observer && observer.disconnect()
   })

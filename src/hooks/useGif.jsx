@@ -8,7 +8,7 @@ export function useGifs({ keyword } = { keyword: null }) {
   const [page, setPage] = useState(INITIAL_PAGE)
   const [loading, setLoading] = useState(false)
   const [loadingNextPage, setLoadingNextPage] = useState(false)
-  const keywordToUse = keyword || localStorage.getItem('lastKeyword') || 'goku'
+  const keywordToUse = keyword || localStorage.getItem('lastKeyword') || 'random'
 
   useEffect(
     function () {
