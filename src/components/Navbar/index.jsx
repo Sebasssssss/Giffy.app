@@ -13,7 +13,7 @@ export default function Navbar() {
           to="/"
           className="group inline-flex items-center gap-1.5 p-2 text-center font-mplus text-lg font-semibold tracking-tighter outline-none"
         >
-          <Pawda /> Sebas <span>Rodriguez</span>
+          <Pawda /> Sebass <span>Rodriguez</span>
         </Link>
         <div className="inline-flex items-center gap-3">
           <SearchForm />
