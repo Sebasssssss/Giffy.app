@@ -1,9 +1,9 @@
 import React from 'react'
 import { Link } from 'wouter'
-import Pawda from './icons/pawda'
-import '../../public/global.css'
-import ToggleButton from './ToggleButton'
-import SearchForm from './SearchForm'
+import Pawda from '../icons/pawda'
+import '../../../public/global.css'
+import ToggleButton from '../ToggleThemeButton'
+import SearchForm from '../SearchForm'
 
 export default function Navbar() {
   return (

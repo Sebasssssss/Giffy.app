@@ -1,5 +1,5 @@
 import React from 'react'
-import Gifs from './Gifs'
+import Gifs from '../Gifs'
 
 export default function CardsAbout({ gifs }) {
   return (

@@ -2,7 +2,7 @@ import React, { useEffect, useRef, useCallback } from 'react'
 import { useGifs } from '../../hooks/useGif'
 import useNearScreen from '../../hooks/useNearScreen'
 import debounce from 'just-debounce-it'
-import CardsAbout from '../../components/cardsAbout'
+import CardsAbout from '../../components/ListOfGifs'
 import { Helmet } from 'react-helmet'
 import DoorDashFavorite from '../../components/Loading'
 

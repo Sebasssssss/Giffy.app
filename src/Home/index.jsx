@@ -1,6 +1,6 @@
 import { useGifs } from '../hooks/useGif'
 import React from 'react'
-import CardsAbout from '../components/cardsAbout'
+import CardsAbout from '../components/ListOfGifs'
 import LazyTrending from '../components/TrendingSearches'
 import Loader from '../components/Loader'
 import { Helmet } from 'react-helmet'
