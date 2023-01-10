@@ -10,7 +10,7 @@ export default function TrendingSearches() {
   }, [])
   return (
     <>
-      <h1 className="my-4 text-xl font-bold underline decoration-zinc-400 decoration-4 underline-offset-4 dark:decoration-zinc-700">
+      <h1 className="my-4 px-4 text-xl font-bold underline decoration-zinc-400 decoration-4 underline-offset-4 dark:decoration-zinc-700">
         Trending Searches
       </h1>
       <div className="flex flex-wrap gap-2 p-4">

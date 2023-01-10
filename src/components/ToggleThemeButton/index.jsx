@@ -43,14 +43,14 @@ function ToggleButton() {
       onClick={toggleTheme}
       onChange={setIsMounted}
       className={`${isMounted ? 'bg-[#31748f]' : 'bg-[#f6c177]'}
-          relative hidden h-8 w-14 shrink-0 cursor-pointer rounded-full border-2 border-transparent transition-colors duration-200 ease-in-out focus:outline-none focus-visible:ring-2  focus-visible:ring-white focus-visible:ring-opacity-75 sm:inline-flex`}
+          relative hidden h-7 w-[50px] shrink-0 cursor-pointer rounded-full border-2 border-transparent transition-colors duration-200 ease-in-out focus:outline-none focus-visible:ring-2  focus-visible:ring-white focus-visible:ring-opacity-75 sm:inline-flex`}
     >
       <span
         aria-hidden="true"
-        className={`${isMounted ? 'translate-x-6' : 'translate-x-0'}
-            pointer-events-none relative z-10 inline-block h-7 w-7 transform rounded-full bg-white shadow-lg ring-0 transition duration-200 ease-in-out`}
+        className={`${isMounted ? 'translate-x-[22px]' : 'translate-x-0'}
+            pointer-events-none relative z-10 inline-block h-6 w-6 transform rounded-full bg-white shadow-lg ring-0 transition duration-200 ease-in-out`}
       />
-      <div className="absolute top-1.5 left-0.5 inline-flex items-center gap-3.5">
+      <div className="absolute top-1 left-0 inline-flex items-center gap-3.5">
         <IoSunny />
         <IoMoon />
       </div>

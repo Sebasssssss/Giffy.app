@@ -28,12 +28,7 @@ export default function SearchResults({ params }) {
       <Helmet>
         <title>{title} | Giffy</title>
       </Helmet>
-      <select className="mb-4 mt-16 w-32 rounded-lg border border-slate-700 bg-zinc-700/50 px-4 font-semibold outline-none">
-        <option disabled>Choose an option!</option>
-        <option className="bg-zinc-900">A-Z</option>
-        <option className="bg-zinc-900">Z-A</option>
-      </select>
-      <h1 className="my-4 px-4 text-xl font-bold underline decoration-zinc-400 decoration-4 underline-offset-4 dark:decoration-zinc-700">
+      <h1 className="my-4 mt-20 px-4 text-xl font-bold underline decoration-zinc-400 decoration-4 underline-offset-4 dark:decoration-zinc-700">
         Searching for:{' '}
         <span className="text-[#f6c177]">{decodeURI(keyword)}</span>
       </h1>
