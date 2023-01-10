@@ -44,8 +44,8 @@ function SearchForm() {
           onClick={handleFocus}
           className={`${
             inputFocus
-              ? '-translate-x-8 md:-translate-x-1'
-              : 'translate-x-28 md:translate-x-48'
+              ? 'invisible -translate-x-8 sm:visible md:-translate-x-1'
+              : 'translate-x-36 md:translate-x-64'
           } absolute top-1 left-1 z-10 h-auto w-6 cursor-pointer opacity-40 transition-transform duration-100`}
         />
         <div
@@ -53,7 +53,7 @@ function SearchForm() {
             inputFocus
               ? 'opacity-100 transition-all duration-500'
               : 'opacity-0 transition-all duration-75'
-          } effect-1`}
+          } effect-1 inline-flex items-center`}
         >
           <input
             placeholder="Search!"
@@ -86,7 +86,7 @@ function SearchForm() {
             className="w-12 border-b border-[#908caa]/70 bg-transparent py-1 text-sm font-semibold outline-none md:w-16"
           >
             <option className="bg-orange-100 dark:bg-slate-800" disabled>
-              Choose an option!
+              Choose a language!
             </option>
 
             {LANGUAGES.map(language => (

@@ -14,12 +14,15 @@ export default function SearchResults({ params }) {
 
   const debounceHandleNextPage = useCallback(
     debounce(() => setPage(prevPage => prevPage + 1), 200),
-    []
+    [setPage]
   )
 
-  useEffect(function () {
-    if (isNearScreen) debounceHandleNextPage()
-  })
+  useEffect(
+    function () {
+      if (isNearScreen) debounceHandleNextPage()
+    },
+    [isNearScreen, debounceHandleNextPage]
+  )
 
   const title = gifs ? `${gifs.length} results of ${keyword}` : ''
 

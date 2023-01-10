@@ -13,7 +13,6 @@ export default function Main() {
           muted
           loop
         />
-        <h1 className="z-10 text-sm uppercase">Welcome to</h1>
         <h1 className="z-10 font-mplus text-4xl font-medium">
           Giffy{' '}
           <span className="text-[#f6c177] transition-colors duration-500 dark:text-[#31748f]">
