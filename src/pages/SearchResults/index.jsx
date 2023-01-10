@@ -7,8 +7,8 @@ import { Helmet } from 'react-helmet'
 import DoorDashFavorite from '../../components/Loading'
 
 export default function SearchResults({ params }) {
-  const { keyword } = params
-  const { loading, gifs, setPage } = useGifs({ keyword })
+  const { keyword, rating = 'g', language = 'en' } = params
+  const { loading, gifs, setPage } = useGifs({ keyword, rating, language })
   const externalRef = useRef()
   const { isNearScreen } = useNearScreen({ externalRef, once: false })
 

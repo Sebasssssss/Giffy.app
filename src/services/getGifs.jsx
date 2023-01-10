@@ -3,11 +3,13 @@ import { API_KEY, API_URL } from './settings'
 export default async function getGifs({
   keyword = 'random',
   limit = 10,
-  page = 0
+  rating,
+  page = 0,
+  language
 } = {}) {
   const apiUrl = `${API_URL}/gifs/search?api_key=${API_KEY}&q=${keyword}&limit=${limit}&offset=${
     page * limit
-  }&rating=g&lang=en`
+  }&rating=${rating}&lang=${language}`
   return fetch(apiUrl)
     .then(res => res.json())
     .then(response => {

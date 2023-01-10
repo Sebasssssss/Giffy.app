@@ -3,19 +3,21 @@ import { FiSearch } from 'react-icons/fi'
 import { useLocation } from 'wouter'
 
 const RATINGS = ['g', 'pg', 'pg-13', 'r']
+const LANGUAGES = ['en', 'es', 'ja', 'it', 'zh', 'ru']
 
 function SearchForm() {
   const [keyword, setKeyword] = useState('')
-  const [rating, setRating] = useState(RATINGS['g'])
+  const [rating, setRating] = useState(RATINGS[0])
+  const [lang, setLang] = useState(LANGUAGES[0])
   const [path, pushLocation] = useLocation()
-  const inputRef = useRef(null)
   const [inputFocus, setInputFocus] = useState(false)
+  const inputRef = useRef(null)
 
   const handleSubmit = e => {
     e.preventDefault()
     setInputFocus(false)
     setKeyword('')
-    pushLocation(`/search/${keyword}/${rating}`)
+    pushLocation(`/search/${keyword}/${rating}/${lang}`)
   }
 
   const handleChange = e => {
@@ -29,6 +31,10 @@ function SearchForm() {
 
   const handleChangeRating = e => {
     setRating(e.target.value)
+  }
+
+  const handleChangeLanguage = e => {
+    setLang(e.target.value)
   }
 
   return (
@@ -70,6 +76,25 @@ function SearchForm() {
             {RATINGS.map(rating => (
               <option className="bg-orange-100 dark:bg-slate-800" key={rating}>
                 {rating}
+              </option>
+            ))}
+          </select>
+          <select
+            onFocus={handleFocus}
+            onChange={handleChangeLanguage}
+            value={lang}
+            className="w-12 border-b border-[#908caa]/70 bg-transparent py-1 text-sm font-semibold outline-none md:w-16"
+          >
+            <option className="bg-orange-100 dark:bg-slate-800" disabled>
+              Choose an option!
+            </option>
+
+            {LANGUAGES.map(language => (
+              <option
+                className="bg-orange-100 dark:bg-slate-800"
+                key={language}
+              >
+                {language}
               </option>
             ))}
           </select>

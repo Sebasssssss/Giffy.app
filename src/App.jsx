@@ -15,7 +15,10 @@ export default function App() {
       <Main />
       <div className="mx-auto max-w-3xl">
         <Route path="/" component={Home} />
-        <Route path="/search/:keyword/:rating?" component={SearchResults} />
+        <Route
+          path="/search/:keyword/:rating?/:language?"
+          component={SearchResults}
+        />
         <Route path="/gif/:id" component={Detail} />
       </div>
       <Footer />
