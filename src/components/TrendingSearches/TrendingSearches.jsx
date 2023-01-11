@@ -18,7 +18,7 @@ export default function TrendingSearches() {
         {trends.map(singleTrend => (
           <motion.li
             key={singleTrend}
-            whileHover={{ scale: [null, 1.2, 1.1], y: [null, -1.9, -1.5] }}
+            whileHover={{ scale: [null, 1.15, 1.05], y: [null, -1.9, -1.5] }}
             transition={{ duration: 0.3 }}
             className="list-none"
           >
