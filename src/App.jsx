@@ -7,6 +7,7 @@ import Footer from './components/Footer'
 import { Route } from 'wouter'
 import './global.css'
 import SearchResults from './pages/SearchResults'
+import { AnimatePresence } from 'framer-motion'
 
 export default function App() {
   return (

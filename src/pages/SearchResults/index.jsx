@@ -4,11 +4,10 @@ import useNearScreen from '../../hooks/useNearScreen'
 import debounce from 'just-debounce-it'
 import CardsAbout from '../../components/ListOfGifs'
 import { Helmet } from 'react-helmet'
-import DoorDashFavorite from '../../components/Loading'
 
 export default function SearchResults({ params }) {
   const { keyword, rating = 'g', language = 'en' } = params
-  const { loading, gifs, setPage } = useGifs({ keyword, rating, language })
+  const { gifs, setPage } = useGifs({ keyword, rating, language })
   const externalRef = useRef()
   const { isNearScreen } = useNearScreen({ externalRef, once: false })
 
@@ -35,7 +34,7 @@ export default function SearchResults({ params }) {
         Searching for:{' '}
         <span className="text-[#f6c177]">{decodeURI(keyword)}</span>
       </h1>
-      {loading ? <DoorDashFavorite /> : <CardsAbout gifs={gifs} />}
+      <CardsAbout gifs={gifs} />
       <div id="visor" ref={externalRef}></div>
     </>
   )

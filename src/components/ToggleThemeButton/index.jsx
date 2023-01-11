@@ -36,7 +36,7 @@ function ToggleButton() {
   const spring = {
     type: 'spring',
     stiffness: 700,
-    damping: 25
+    damping: 23
   }
 
   return (

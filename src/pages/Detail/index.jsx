@@ -1,6 +1,11 @@
 import useSingleGif from '../../hooks/useSingleGif'
 import React from 'react'
 import { Helmet } from 'react-helmet'
+import { motion, AnimatePresence } from 'framer-motion'
+
+if (typeof window !== 'undefined') {
+  window.history.scrollRestoration = 'manual'
+}
 
 export default function Detail({ params }) {
   const { gif } = useSingleGif({ id: params.id })
@@ -9,21 +14,28 @@ export default function Detail({ params }) {
 
   return (
     <>
-      <>
-        <Helmet>
-          <title>{title} | Giffy</title>
-        </Helmet>
-        <div className="mt-24 grid grid-cols-1 gap-4 p-4">
-          <img
-            src={gif.url}
-            className="mb-8 w-full rounded-xl border border-slate-300 dark:border-slate-700"
-          />
-          <div className="flex flex-col border-b">
-            <h1 className="text-left font-mplus text-3xl">{gif.title}</h1>
-            <h1 className="py-2 pb-4 text-left">{gif.title}</h1>
-          </div>
+      <Helmet>
+        <title>{title} | Giffy</title>
+      </Helmet>
+      <motion.div
+        initial={{ opacity: 0, scale: 0.978 }}
+        animate={{ opacity: 100, scale: 1 }}
+        transition={{
+          duration: 0.8,
+          delay: 0.5,
+          ease: [0, 0.71, 0.2, 1.01]
+        }}
+        className="mt-24 grid grid-cols-1 gap-4 p-4"
+      >
+        <img
+          src={gif.url}
+          className="mb-8 w-full rounded-xl border border-slate-300 dark:border-slate-700"
+        />
+        <div className="flex flex-col border-b">
+          <h1 className="text-left font-mplus text-3xl">{gif.title}</h1>
+          <h1 className="py-2 pb-4 text-left">{gif.title}</h1>
         </div>
-      </>
+      </motion.div>
     </>
   )
 }
