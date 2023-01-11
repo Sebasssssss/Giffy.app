@@ -24,7 +24,7 @@ export default function SearchResults({ params }) {
     [isNearScreen, debounceHandleNextPage]
   )
 
-  const title = gifs ? `${gifs.length} results of ${keyword}` : ''
+  const title = gifs ? `${gifs.length} results of ${decodeURI(keyword)}` : ''
 
   return (
     <>

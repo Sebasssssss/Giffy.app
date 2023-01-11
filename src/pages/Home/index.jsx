@@ -2,8 +2,8 @@ import { useGifs } from '../../hooks/useGif'
 import React from 'react'
 import CardsAbout from '../../components/ListOfGifs'
 import LazyTrending from '../../components/TrendingSearches'
-import Loader from '../../components/Loader'
 import { Helmet } from 'react-helmet'
+import DoorDashFavorite from '../../components/Loading'
 
 export default function Home() {
   const { gifs, loading } = useGifs()
@@ -19,7 +19,7 @@ export default function Home() {
         Nowadays Im coding php and using Tailwindcss as a tool for making my
         websites.
       </p>
-      {loading ? <Loader /> : <CardsAbout gifs={gifs} />}
+      {loading ? <DoorDashFavorite /> : <CardsAbout gifs={gifs} />}
       <LazyTrending />
     </>
   )

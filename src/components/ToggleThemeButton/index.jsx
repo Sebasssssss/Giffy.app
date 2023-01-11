@@ -1,8 +1,6 @@
 import React, { useState, useEffect } from 'react'
-import { Switch } from '@headlessui/react'
-import { IoSunny, IoMoon } from 'react-icons/io5'
-
-const themes = ['light', 'dark']
+import { motion } from 'framer-motion'
+import './styles.css'
 
 function ToggleButton() {
   const [isMounted, setIsMounted] = useState(false)
@@ -28,33 +26,31 @@ function ToggleButton() {
     const root = document.documentElement
     if (theme === 'light') {
       root.classList.remove('dark')
+      setIsMounted(false)
     } else {
       root.classList.add('dark')
+      setIsMounted(true)
     }
   }, [theme])
 
-  useEffect(() => {
-    setIsMounted(true)
-  }, [])
+  const spring = {
+    type: 'spring',
+    stiffness: 700,
+    damping: 25
+  }
 
   return (
-    <Switch
-      checked={isMounted}
+    <div
+      className="switch flex h-6 w-10 cursor-pointer justify-start rounded-[50px] bg-orange-200/50 p-0.5 dark:bg-[#31748f]/50"
+      data-isMounted={isMounted}
       onClick={toggleTheme}
-      onChange={setIsMounted}
-      className={`${isMounted ? 'bg-[#31748f]' : 'bg-[#f6c177]'}
-          relative hidden h-7 w-[50px] shrink-0 cursor-pointer rounded-full border-2 border-transparent transition-colors duration-200 ease-in-out focus:outline-none focus-visible:ring-2  focus-visible:ring-white focus-visible:ring-opacity-75 sm:inline-flex`}
     >
-      <span
-        aria-hidden="true"
-        className={`${isMounted ? 'translate-x-[22px]' : 'translate-x-0'}
-            pointer-events-none relative z-10 inline-block h-6 w-6 transform rounded-full bg-white shadow-lg ring-0 transition duration-200 ease-in-out`}
+      <motion.div
+        className="h-5 w-5 rounded-[40px] bg-[#f6c177] dark:bg-[#31748f]"
+        layout
+        transition={spring}
       />
-      <div className="absolute top-1 left-0 inline-flex items-center gap-3.5">
-        <IoSunny />
-        <IoMoon />
-      </div>
-    </Switch>
+    </div>
   )
 }
 

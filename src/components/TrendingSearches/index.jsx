@@ -1,4 +1,3 @@
-import Loader from '../../components/Loader'
 import React, { Suspense } from 'react'
 import useNearScreen from '../../hooks/useNearScreen'
 
@@ -9,8 +8,8 @@ export default function LazyTrending() {
 
   return (
     <div ref={fromRef}>
-      <Suspense falback={<Loader />}>
-        {isNearScreen ? <TrendingSearches /> : <Loader />}
+      <Suspense falback={null}>
+        {isNearScreen ? <TrendingSearches /> : null}
       </Suspense>
     </div>
   )
