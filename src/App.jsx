@@ -7,6 +7,7 @@ import Footer from './components/Footer'
 import { Route } from 'wouter'
 import './global.css'
 import SearchResults from './pages/SearchResults'
+import TrendingGifPage from './pages/TrendingGifPage'
 
 export default function App() {
   return (
@@ -15,6 +16,7 @@ export default function App() {
       <Main />
       <div className="mx-auto max-w-3xl">
         <Route path="/" component={Home} />
+        <Route path="/gif/trending" component={TrendingGifPage} />
         <Route
           path="/search/:keyword/:rating?/:language?"
           component={SearchResults}
