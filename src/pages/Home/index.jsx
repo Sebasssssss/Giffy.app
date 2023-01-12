@@ -1,21 +1,14 @@
-import { useGifs } from '../../hooks/useGif'
 import React from 'react'
 import ListOfGifs from '../../components/ListOfGifs'
 import LazyTrending from '../../components/TrendingSearches'
+import Carousel from '../../components/Carousel'
 import { Helmet } from 'react-helmet'
-import {
-  IoArrowForward,
-  IoChevronBack,
-  IoChevronForward
-} from 'react-icons/io5/'
-import ListOfTrendingGifs from '../../components/ListOfTrendingGifs'
-import useTrendingGif from '../../hooks/useTrendingGif'
+import { IoArrowForward } from 'react-icons/io5/'
 import { motion } from 'framer-motion'
-import { Link } from 'wouter'
+import { useGifs } from '../../hooks/useGif'
 
 export default function Home() {
   const { gifs } = useGifs()
-  const { trendingGifs } = useTrendingGif()
 
   return (
     <>
@@ -45,23 +38,8 @@ export default function Home() {
           ease: [0, 0.71, 0.2, 1.01]
         }}
       >
-        <div className="flex justify-between px-4">
-          <h1 className="pb-4 text-xl font-bold underline decoration-zinc-400 decoration-4 underline-offset-4 dark:decoration-zinc-700">
-            Trending Gifs
-          </h1>
-          <Link
-            to="/gif/trending/"
-            className="mt-2 inline-flex items-center gap-1 text-[#f6c177] transition-colors duration-500 hover:border-b hover:border-b-[#31648f] dark:text-[#31748f]"
-          >
-            More gifs! <IoArrowForward />
-          </Link>
-        </div>
         <div className="relative w-full overflow-hidden shadow-2xl shadow-zinc-900">
-          <IoChevronForward className="absolute right-3 top-20 text-4xl" />
-          <IoChevronBack className="absolute left-3 top-20 text-4xl" />
-          <ul className="flex h-48 w-max gap-4 px-4">
-            <ListOfTrendingGifs trendingGifs={trendingGifs} />
-          </ul>
+          <Carousel />
           <ListOfGifs gifs={gifs} />
         </div>
       </motion.div>
