@@ -1,9 +1,10 @@
 import React from 'react'
 import { Link } from 'wouter'
+import { motion } from 'framer-motion'
 
 function Gifs({ title, id, url }) {
   return (
-    <>
+    <motion.div exit={{ opacity: 0, scale: 0.5 }}>
       <li className="mb-4 text-center">
         <Link key={id} to={`/gif/${id}`}>
           <img
@@ -15,7 +16,7 @@ function Gifs({ title, id, url }) {
           <h1 className="text-xl font-bold">{title}</h1>
         </Link>
       </li>
-    </>
+    </motion.div>
   )
 }
 

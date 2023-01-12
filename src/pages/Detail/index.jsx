@@ -1,7 +1,7 @@
 import useSingleGif from '../../hooks/useSingleGif'
 import React from 'react'
 import { Helmet } from 'react-helmet'
-import { motion, AnimatePresence } from 'framer-motion'
+import { motion } from 'framer-motion'
 
 if (typeof window !== 'undefined') {
   window.history.scrollRestoration = 'manual'

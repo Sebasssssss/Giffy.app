@@ -1,6 +1,6 @@
 import React from 'react'
 import Gifs from '../Gifs'
-import { motion } from 'framer-motion'
+import { AnimatePresence, motion } from 'framer-motion'
 
 export default function CardsAbout({ gifs }) {
   return (
@@ -15,9 +15,11 @@ export default function CardsAbout({ gifs }) {
           ease: [0, 0.71, 0.2, 1.01]
         }}
       >
-        {gifs.map(({ title, id, url }) => (
-          <Gifs key={id} id={id} url={url} title={title} />
-        ))}
+        <AnimatePresence mode="wait">
+          {gifs.map(({ title, id, url }) => (
+            <Gifs key={id} id={id} url={url} title={title} />
+          ))}
+        </AnimatePresence>
       </motion.ul>
     </>
   )
