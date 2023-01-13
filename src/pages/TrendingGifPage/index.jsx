@@ -35,7 +35,7 @@ export default function TrendingGifPage() {
         to="/"
         className="group mt-20 inline-flex items-center gap-1 p-4 font-semibold"
       >
-        <IoChevronBack className="text-lg text-[#f6c177] transition-colors duration-500 group-hover:text-[#e0def4] dark:text-[#31748f]" />
+        <IoChevronBack className="text-lg text-[#f6c177] transition-colors duration-500 group-hover:text-[#191724] dark:text-[#31748f] dark:group-hover:text-[#e0def4]" />
         <span className="transition-colors duration-500 group-hover:text-[#f6c177] dark:group-hover:text-[#31748f]">
           Go back
         </span>

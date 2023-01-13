@@ -1,9 +1,9 @@
 import React from 'react'
 import { Link } from 'wouter'
-import Pawda from '../icons/pawda'
 import '../../../public/global.css'
 import ToggleButton from '../ToggleThemeButton'
 import SearchForm from '../SearchForm'
+import { motion } from 'framer-motion'
 
 export default function Navbar() {
   return (
@@ -11,9 +11,15 @@ export default function Navbar() {
       <nav className="mx-auto flex max-w-3xl justify-between">
         <Link
           to="/"
-          className="group inline-flex items-center gap-1.5 p-2 text-center font-mplus text-lg font-semibold tracking-tighter outline-none"
+          className="group inline-flex items-center gap-1.5 p-2 text-center tracking-tighter outline-none"
         >
-          <Pawda /> Home
+          <motion.span
+            whileHover={{ scale: [null, 1.2, 1.1] }}
+            whileTap={{ scale: 1.1 }}
+            className="cursor-pointer font-mplus text-lg"
+          >
+            Home
+          </motion.span>
         </Link>
         <div className="inline-flex items-center gap-3">
           <SearchForm />
