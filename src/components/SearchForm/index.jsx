@@ -1,27 +1,60 @@
-import React, { useState, useRef } from 'react'
+import React, { useReducer, useState, useRef } from 'react'
 import { FiSearch } from 'react-icons/fi'
 import { useLocation } from 'wouter'
 
 const RATINGS = ['g', 'pg', 'pg-13', 'r']
 const LANGUAGES = ['en', 'es', 'ja', 'it', 'zh', 'ru']
+const ACTIONS = {
+  UPDATE_KEYWORD: 'update_keyword',
+  UPDATE_RATING: 'update_rating',
+  UPDATE_LANGUAGE: 'update_language'
+}
+
+const reducer = (state, action) => {
+  switch (action.type) {
+    case ACTIONS.UPDATE_KEYWORD:
+      return {
+        ...state,
+        keyword: action.payload
+      }
+
+    case ACTIONS.UPDATE_RATING:
+      return {
+        ...state,
+        rating: action.payload
+      }
+
+    case ACTIONS.UPDATE_LANGUAGE:
+      return {
+        ...state,
+        language: action.payload
+      }
+
+    default:
+      return state
+  }
+}
 
 function SearchForm() {
-  const [keyword, setKeyword] = useState('')
-  const [rating, setRating] = useState(RATINGS[0])
-  const [lang, setLang] = useState(LANGUAGES[0])
   const [path, pushLocation] = useLocation()
-  const [inputFocus, setInputFocus] = useState(false)
   const inputRef = useRef(null)
+  const [inputFocus, setInputFocus] = useState(false)
+  const [state, dispatch] = useReducer(reducer, {
+    keyword: '',
+    rating: RATINGS[0],
+    lang: LANGUAGES[0]
+  })
+  const { keyword, rating, lang } = state
 
   const handleSubmit = e => {
     e.preventDefault()
-    setInputFocus(false)
-    setKeyword('')
+    dispatch({ type: ACTIONS.UPDATE_KEYWORD, payload: '' })
+    inputRef.current.blur()
     pushLocation(`/search/${keyword}/${rating}/${lang}`)
   }
 
   const handleChange = e => {
-    setKeyword(e.target.value)
+    dispatch({ type: ACTIONS.UPDATE_KEYWORD, payload: e.target.value })
   }
 
   const handleFocus = () => {
@@ -30,11 +63,11 @@ function SearchForm() {
   }
 
   const handleChangeRating = e => {
-    setRating(e.target.value)
+    dispatch({ type: ACTIONS.UPDATE_RATING, payload: e.target.value })
   }
 
   const handleChangeLanguage = e => {
-    setLang(e.target.value)
+    dispatch({ type: ACTIONS.UPDATE_LANGUAGE, payload: e.target.value })
   }
 
   return (
