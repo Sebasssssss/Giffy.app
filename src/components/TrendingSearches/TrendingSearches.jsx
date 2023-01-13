@@ -24,7 +24,7 @@ export default function TrendingSearches() {
           >
             <Link
               to={`/search/${singleTrend}`}
-              className="rounded border border-slate-700/20 p-1 hover:border-[#f6c177] dark:hover:border-[#31748f]"
+              className="rounded border border-slate-700/20 p-1 hover:border-gold dark:hover:border-pine"
             >
               {singleTrend}
             </Link>

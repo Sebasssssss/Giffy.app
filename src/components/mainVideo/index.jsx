@@ -15,7 +15,7 @@ export default function Main() {
         />
         <h1 className="z-10 font-mplus text-4xl font-medium">
           Giffy{' '}
-          <span className="text-[#f6c177] transition-colors duration-500 dark:text-[#31748f]">
+          <span className="text-gold transition-colors duration-500 dark:text-pine">
             app
           </span>
         </h1>

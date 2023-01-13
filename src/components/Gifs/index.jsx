@@ -10,7 +10,7 @@ function Gifs({ title, id, url }) {
             src={url}
             loading="lazy"
             decoding="async"
-            className="h-80 w-full rounded-xl border border-[#ebbcba] object-cover dark:border-[#26233a] md:h-44"
+            className="h-80 w-full rounded-xl border border-rose object-cover dark:border-overlay md:h-44"
           />
           <h1 className="text-xl font-bold">{title}</h1>
         </Link>

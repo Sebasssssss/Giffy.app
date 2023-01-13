@@ -61,13 +61,13 @@ function SearchForm() {
             onBlur={() => setInputFocus(false)}
             value={keyword}
             ref={inputRef}
-            className="effect-1 w-24 border-b border-[#908caa]/70 bg-transparent py-1 text-sm outline-none md:w-40 md:px-7"
+            className="effect-1 w-24 border-b border-subtle/70 bg-transparent py-1 text-sm outline-none md:w-40 md:px-7"
           />
           <select
             onFocus={handleFocus}
             onChange={handleChangeRating}
             value={rating}
-            className="w-12 border-b border-[#908caa]/70 bg-transparent py-1 text-sm font-semibold outline-none md:w-16"
+            className="w-12 border-b border-subtle/70 bg-transparent py-1 text-sm font-semibold outline-none md:w-16"
           >
             <option className="bg-orange-100 dark:bg-slate-800" disabled>
               Choose an option!
@@ -83,7 +83,7 @@ function SearchForm() {
             onFocus={handleFocus}
             onChange={handleChangeLanguage}
             value={lang}
-            className="w-12 border-b border-[#908caa]/70 bg-transparent py-1 text-sm font-semibold outline-none md:w-16"
+            className="w-12 border-b border-subtle/70 bg-transparent py-1 text-sm font-semibold outline-none md:w-16"
           >
             <option className="bg-orange-100 dark:bg-slate-800" disabled>
               Choose a language!

@@ -19,7 +19,7 @@ export default function Carousel() {
         </h1>
         <Link
           to="/gif/trending/"
-          className="mt-2 inline-flex items-center gap-1 rounded-lg px-2 text-[#f6c177] transition-colors duration-200 hover:bg-[#f6c177]/20 hover:underline dark:text-[#31748f] dark:hover:bg-[#31748f]/10"
+          className="mt-2 inline-flex items-center gap-1 rounded-lg px-2 text-gold transition-colors duration-200 hover:bg-gold/20 hover:underline dark:text-pine dark:hover:bg-pine/10"
         >
           See more! <IoArrowForward />
         </Link>

@@ -46,7 +46,7 @@ function ToggleButton() {
       onClick={toggleTheme}
     >
       <motion.div
-        className="h-5 w-5 rounded-[40px] bg-[#f6c177] dark:bg-[#31748f]"
+        className="h-5 w-5 rounded-[40px] bg-gold dark:bg-pine"
         layout
         transition={spring}
       />
