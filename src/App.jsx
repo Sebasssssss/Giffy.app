@@ -8,6 +8,7 @@ import { Route } from 'wouter'
 import './global.css'
 import SearchResults from './pages/SearchResults'
 import TrendingGifPage from './pages/TrendingGifPage'
+import StickersPage from './pages/StickersPage'
 
 export default function App() {
   return (
@@ -17,6 +18,7 @@ export default function App() {
       <div className="mx-auto max-w-3xl">
         <Route path="/" component={Home} />
         <Route path="/gif/trending" component={TrendingGifPage} />
+        <Route path="/stickers/trending" component={StickersPage} />
         <Route
           path="/search/:keyword/:rating?/:language?"
           component={SearchResults}
