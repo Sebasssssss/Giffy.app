@@ -27,7 +27,6 @@ export default function TrendingGifPage() {
 
   return (
     <>
-      {' '}
       <Helmet>
         <title>Trending Gifs | Giffy</title>
       </Helmet>

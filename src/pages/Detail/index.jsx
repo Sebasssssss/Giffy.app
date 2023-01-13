@@ -3,10 +3,6 @@ import React from 'react'
 import { Helmet } from 'react-helmet'
 import { motion } from 'framer-motion'
 
-if (typeof window !== 'undefined') {
-  window.history.scrollRestoration = 'manual'
-}
-
 export default function Detail({ params }) {
   const { gif } = useSingleGif({ id: params.id })
   if (!gif) return null
