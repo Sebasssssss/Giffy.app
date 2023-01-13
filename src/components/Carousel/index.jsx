@@ -24,9 +24,9 @@ export default function Carousel() {
           See more! <IoArrowForward />
         </Link>
       </div>
-      <div className="relative w-full overflow-hidden">
-        <IoChevronForward className="absolute right-3 top-20 text-4xl" />
-        <IoChevronBack className="absolute left-3 top-20 text-4xl" />
+      <div className="group relative w-full overflow-hidden">
+        <IoChevronForward className="absolute right-3 top-20 hidden text-4xl group-hover:block" />
+        <IoChevronBack className="absolute left-3 top-20 hidden text-4xl group-hover:block" />
         <ul className="flex h-48 w-max gap-4 px-4">
           <ListOfTrendingGifs trendingGifs={trendingGifs} />
         </ul>
