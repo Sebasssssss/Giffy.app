@@ -28,11 +28,11 @@ export default function Carousel() {
         </Link>
       </div>
       <div className="group relative w-full overflow-hidden">
-        <IoChevronForward className="absolute right-3 top-20 hidden text-4xl group-hover:block" />
         <IoChevronBack className="absolute left-3 top-20 hidden text-4xl group-hover:block" />
         <ul className="flex h-48 w-max gap-4 px-4">
           <ListOfTrendingGifs trendingGifs={trendingGifs} />
         </ul>
+        <IoChevronForward className="absolute right-3 top-20 hidden text-4xl group-hover:block" />
       </div>
       <div className="flex justify-between px-4 py-2">
         <h1 className="pb-4 text-xl font-bold underline decoration-zinc-400 decoration-4 underline-offset-4 dark:decoration-zinc-700">
@@ -46,11 +46,11 @@ export default function Carousel() {
         </Link>
       </div>
       <div className="group relative w-full overflow-hidden">
-        <IoChevronForward className="absolute right-3 top-20 hidden text-4xl group-hover:block" />
         <IoChevronBack className="absolute left-3 top-20 hidden text-4xl group-hover:block" />
         <ul className="flex h-48 w-max gap-4 px-4">
           <ListOfStickers stickers={stickers} />
         </ul>
+        <IoChevronForward className="absolute right-3 top-20 hidden text-4xl group-hover:block" />
       </div>
     </>
   )

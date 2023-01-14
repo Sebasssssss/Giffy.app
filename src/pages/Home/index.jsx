@@ -38,7 +38,7 @@ export default function Home() {
           ease: [0, 0.71, 0.2, 1.01]
         }}
       >
-        <div className="relative overflow-hidden">
+        <div className="relative">
           <Carousel />
           <ListOfGifs gifs={gifs} />
         </div>
