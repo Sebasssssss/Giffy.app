@@ -11,12 +11,12 @@ export default function Navbar() {
       <nav className="mx-auto flex max-w-3xl justify-between">
         <Link
           to="/"
-          className="group inline-flex items-center gap-1.5 p-2 text-center tracking-tighter outline-none"
+          className="group inline-flex items-center gap-1.5 text-center tracking-tighter outline-none"
         >
           <motion.span
             whileHover={{ scale: [null, 1.2, 1.1] }}
             whileTap={{ scale: 1.1 }}
-            className="cursor-pointer font-mplus text-lg"
+            className="cursor-pointer px-2 font-mplus text-lg"
           >
             Home
           </motion.span>

@@ -40,6 +40,9 @@ export default function Home() {
       >
         <div className="relative">
           <Carousel />
+          <h1 className="p-4 text-xl font-bold underline decoration-zinc-400 decoration-4 underline-offset-4 dark:decoration-zinc-700">
+            Common Gifs
+          </h1>
           <ListOfGifs gifs={gifs} />
         </div>
       </motion.div>

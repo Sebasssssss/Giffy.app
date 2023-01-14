@@ -1,60 +1,26 @@
-import React, { useReducer, useState, useRef } from 'react'
+import React, { useState, useRef } from 'react'
 import { FiSearch } from 'react-icons/fi'
 import { useLocation } from 'wouter'
 
 const RATINGS = ['g', 'pg', 'pg-13', 'r']
 const LANGUAGES = ['en', 'es', 'ja', 'it', 'zh', 'ru']
-const ACTIONS = {
-  UPDATE_KEYWORD: 'update_keyword',
-  UPDATE_RATING: 'update_rating',
-  UPDATE_LANGUAGE: 'update_language'
-}
-
-const reducer = (state, action) => {
-  switch (action.type) {
-    case ACTIONS.UPDATE_KEYWORD:
-      return {
-        ...state,
-        keyword: action.payload
-      }
-
-    case ACTIONS.UPDATE_RATING:
-      return {
-        ...state,
-        rating: action.payload
-      }
-
-    case ACTIONS.UPDATE_LANGUAGE:
-      return {
-        ...state,
-        language: action.payload
-      }
-
-    default:
-      return state
-  }
-}
 
 function SearchForm() {
-  const [path, pushLocation] = useLocation()
+  const [keyword, setKeyword] = useState('')
+  const [rating, setRating] = useState(RATINGS[0])
+  const [lang, setLang] = useState(LANGUAGES[0])
   const inputRef = useRef(null)
+  const [path, pushLocation] = useLocation()
   const [inputFocus, setInputFocus] = useState(false)
-  const [state, dispatch] = useReducer(reducer, {
-    keyword: '',
-    rating: RATINGS[0],
-    lang: LANGUAGES[0]
-  })
-  const { keyword, rating, lang } = state
 
   const handleSubmit = e => {
     e.preventDefault()
-    dispatch({ type: ACTIONS.UPDATE_KEYWORD, payload: '' })
     inputRef.current.blur()
     pushLocation(`/search/${keyword}/${rating}/${lang}`)
   }
 
   const handleChange = e => {
-    dispatch({ type: ACTIONS.UPDATE_KEYWORD, payload: e.target.value })
+    setKeyword(e.target.value)
   }
 
   const handleFocus = () => {
@@ -63,11 +29,11 @@ function SearchForm() {
   }
 
   const handleChangeRating = e => {
-    dispatch({ type: ACTIONS.UPDATE_RATING, payload: e.target.value })
+    setRating(e.target.value)
   }
 
   const handleChangeLanguage = e => {
-    dispatch({ type: ACTIONS.UPDATE_LANGUAGE, payload: e.target.value })
+    setLang(e.target.value)
   }
 
   return (
@@ -77,8 +43,8 @@ function SearchForm() {
           onClick={handleFocus}
           className={`${
             inputFocus
-              ? 'invisible -translate-x-8 sm:visible md:-translate-x-1'
-              : 'translate-x-36 md:translate-x-64'
+              ? '-translate-x-8 md:-translate-x-1'
+              : 'translate-x-40 md:translate-x-64'
           } absolute top-1 left-1 z-10 h-auto w-6 cursor-pointer opacity-40 transition-transform duration-100`}
         />
         <div
