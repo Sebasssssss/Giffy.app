@@ -11,7 +11,7 @@ export default function TrendingSearches() {
   }, [])
   return (
     <>
-      <h1 className="my-4 px-4 text-xl font-bold underline decoration-zinc-400 decoration-4 underline-offset-4 dark:decoration-zinc-700">
+      <h1 className="my-4 w-max rounded border border-gold border-opacity-10 bg-gold/40 px-4 py-2 text-xl font-bold shadow dark:border-pine dark:border-opacity-30 dark:bg-pine/50">
         Trending Searches
       </h1>
       <div className="flex flex-wrap gap-4 p-4">

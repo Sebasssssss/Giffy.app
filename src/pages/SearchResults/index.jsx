@@ -5,6 +5,8 @@ import debounce from 'just-debounce-it'
 import { Helmet } from 'react-helmet'
 import ListOfGifs from '../../components/ListOfGifs'
 import { motion } from 'framer-motion'
+import { Link } from 'wouter'
+import { IoChevronBack } from 'react-icons/io5/'
 
 export default function SearchResults({ params }) {
   const { keyword, rating = 'g', language = 'en' } = params
@@ -31,7 +33,16 @@ export default function SearchResults({ params }) {
       <Helmet>
         <title>{title} | Giffy</title>
       </Helmet>
-      <h1 className="my-4 mt-20 px-4 text-xl font-bold underline decoration-zinc-400 decoration-4 underline-offset-4 dark:decoration-zinc-700">
+      <Link
+        to="/"
+        className="group inline-flex items-center gap-1 p-4 font-semibold"
+      >
+        <IoChevronBack className="text-lg text-[#f6c177] transition-colors duration-500 group-hover:text-[#191724] dark:text-[#31748f] dark:group-hover:text-[#e0def4]" />
+        <span className="transition-colors duration-500 group-hover:text-[#f6c177] dark:group-hover:text-[#31748f]">
+          Go back
+        </span>
+      </Link>
+      <h1 className="my-4 px-4 text-xl font-bold underline decoration-zinc-400 decoration-4 underline-offset-4 dark:decoration-zinc-700">
         Searching for:{' '}
         <span className="text-[#f6c177]">{decodeURI(keyword)}</span>
       </h1>
