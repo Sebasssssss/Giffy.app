@@ -3,3 +3,5 @@
    <img align="center" width="300" src="https://github.com/Sebasssssss/Giffy.app/blob/master/public/Main.png?raw=true" />
 </p>
 ![Alt text](https://github.com/Sebasssssss/Giffy.app/blob/master/public/Main.png?raw=true)
+
+![Alt text](public/Main.png?raw=true "Title")
