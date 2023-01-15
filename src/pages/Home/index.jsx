@@ -15,7 +15,7 @@ export default function Home() {
       <Helmet>
         <title>Home | Giffy</title>
       </Helmet>
-      <p className="mx-auto mt-16 p-5">
+      <p className="mx-auto rounded p-5">
         Lorem ipsum dolor sit amet consectetur adipisicing elit. Corrupti id
         nihil, at dolorum eaque maiores quia amet sit eius libero nulla ipsam
         perferendis consectetur obcaecati fugiat, odio quas non facere dicta
@@ -38,11 +38,13 @@ export default function Home() {
           ease: [0, 0.71, 0.2, 1.01]
         }}
       >
-        <div className="relative">
+        <div className="relative px-4">
           <Carousel />
-          <h1 className="p-4 text-xl font-bold underline decoration-zinc-400 decoration-4 underline-offset-4 dark:decoration-zinc-700">
-            Common Gifs
-          </h1>
+          <div className="pt-8">
+            <h1 className="w-max rounded border border-gold border-opacity-10 bg-gold/40 px-4 py-2 text-xl font-bold shadow dark:border-pine dark:border-opacity-30 dark:bg-pine/50">
+              Common Gifs
+            </h1>
+          </div>
           <ListOfGifs gifs={gifs} />
         </div>
       </motion.div>
