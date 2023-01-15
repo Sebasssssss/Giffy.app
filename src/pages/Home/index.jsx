@@ -15,7 +15,7 @@ export default function Home() {
       <Helmet>
         <title>Home | Giffy</title>
       </Helmet>
-      <p className="mx-auto mt-16 max-w-3xl p-5">
+      <p className="mx-auto mt-16 p-5">
         Lorem ipsum dolor sit amet consectetur adipisicing elit. Corrupti id
         nihil, at dolorum eaque maiores quia amet sit eius libero nulla ipsam
         perferendis consectetur obcaecati fugiat, odio quas non facere dicta
