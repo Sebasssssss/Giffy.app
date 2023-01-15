@@ -41,8 +41,8 @@ export default function Home() {
         <div className="relative px-4">
           <Carousel />
           <div className="pt-8">
-            <h1 className="w-max rounded border border-gold border-opacity-10 bg-gold/40 px-4 py-2 text-xl font-bold shadow dark:border-pine dark:border-opacity-30 dark:bg-pine/50">
-              Common Gifs
+            <h1 className="fancy py-2 font-mplus text-lg font-semibold">
+              <span>Common Gifs</span>
             </h1>
           </div>
           <ListOfGifs gifs={gifs} />

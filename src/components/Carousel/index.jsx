@@ -16,13 +16,13 @@ export default function Carousel() {
 
   return (
     <>
-      <div className="flex justify-between py-4">
-        <h1 className="rounded border border-gold border-opacity-10 bg-gold/40 px-4 py-2 text-xl font-bold shadow dark:border-pine dark:border-opacity-30 dark:bg-pine/50">
-          Trending Gifs
+      <div className="relative py-4 text-center">
+        <h1 className="fancy font-mplus text-lg font-semibold">
+          <span>Trending Gifs</span>
         </h1>
         <Link
           to="/gif/trending/"
-          className="mt-2 inline-flex items-center gap-1 rounded-lg px-2 text-gold transition-colors duration-200 hover:bg-gold/20 hover:underline dark:text-pine dark:hover:bg-pine/10"
+          className="absolute right-0 top-0 mt-2 inline-flex items-center gap-1 rounded-lg px-2 text-gold transition-colors duration-200 hover:bg-gold/20 hover:underline dark:text-pine dark:hover:bg-pine/10"
         >
           See more! <IoArrowForward />
         </Link>
@@ -34,13 +34,13 @@ export default function Carousel() {
         </ul>
         <IoChevronForward className="absolute right-3 top-20 hidden text-4xl group-hover:block" />
       </div>
-      <div className="flex justify-between py-4 pt-8">
-        <h1 className="rounded border border-gold border-opacity-10 bg-gold/40 px-4 py-2 text-xl font-bold shadow dark:border-pine dark:border-opacity-30 dark:bg-pine/50">
-          Trending Stickers
+      <div className="relative py-4 text-center">
+        <h1 className="fancy mt-8 font-mplus text-lg font-semibold">
+          <span>Trending Stickers</span>
         </h1>
         <Link
           to="/stickers/trending/"
-          className="mt-2 inline-flex items-center gap-1 rounded-lg px-2 text-gold transition-colors duration-200 hover:bg-gold/20 hover:underline dark:text-pine dark:hover:bg-pine/10"
+          className="absolute right-0 top-8 mt-2 inline-flex items-center gap-1 rounded-lg px-2 text-gold transition-colors duration-200 hover:bg-gold/20 hover:underline dark:text-pine dark:hover:bg-pine/10"
         >
           See more! <IoArrowForward />
         </Link>
