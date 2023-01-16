@@ -25,7 +25,7 @@ export default function TrendingSearches() {
           >
             <Link
               to={`/search/${singleTrend}`}
-              className="inline-flex items-center rounded-lg bg-[#eee] px-3 py-1.5 text-lightcoral shadow-input hover:bg-lightcoral hover:text-text"
+              className="inline-flex items-center rounded-lg bg-[#eee] px-3 py-1.5 text-lightcoral shadow-field hover:bg-lightcoral hover:text-text dark:bg-[#85586f] dark:text-text dark:shadow-darkField dark:hover:bg-[#5c527f]"
             >
               {singleTrend}
             </Link>

@@ -8,20 +8,21 @@ module.exports = {
         mplus: ["'M PLUS Rounded 1c'", 'Verdana', 'sans-serif']
       },
       colors: {
-        gold: '#f6c177',
-        pine: '#31748f',
-        rose: '#ebbcba',
         base: '#191724',
-        surface: '#1f1d2e',
-        overlay: '#26233a',
-        subtle: '#908caa',
-        muted: '#6e6a86',
         text: '#e0def4',
-        love: '#eb6f92',
         lightcoral: 'lightcoral'
       },
       boxShadow: {
-        input: '0 0.2rem #dfd9d9'
+        field: '0 0.2rem #dfd9d9',
+        fieldClick: '0 0.1rem #dfd9d9',
+        darkField: '0 0.2rem #3E2C41',
+        darkFieldClick: '0 0.1rem #3E2C41',
+        switch: '0 0.2em #dfd9d9',
+        dark: '0 0.2rem #5C527F',
+        card: '3px 5px 2px 1px rgba(0, 0, 255, 0.2)',
+        cardHover: '-5px 8px 2px -1px rgba(0, 0, 255, 0.2)',
+        cardDark: '3px 5px 2px 1px #3E2C41',
+        cardDarkHover: '-5px 8px 2px -1px #3E2C41'
       }
     }
   },

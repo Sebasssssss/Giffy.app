@@ -31,7 +31,7 @@ export default function TrendingGifPage() {
         <title>Trending Gifs | Giffy</title>
       </Helmet>
       <Link to="/" className="group gap-1 p-4 font-semibold">
-        <span className="inline-flex cursor-pointer items-center gap-1 rounded-lg bg-[#eee] px-3 py-1.5 text-lightcoral shadow-input hover:bg-lightcoral hover:text-text">
+        <span className="inline-flex cursor-pointer items-center rounded-lg bg-[#eee] px-3 py-1.5 text-lightcoral shadow-field hover:bg-lightcoral hover:text-text active:translate-y-0.5 active:shadow-fieldClick dark:bg-[#85586f] dark:text-text dark:shadow-darkField dark:hover:bg-[#5c527f] dark:active:shadow-darkFieldClick">
           <IoChevronBack />
           Go back
         </span>

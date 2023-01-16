@@ -35,12 +35,12 @@ export default function SearchResults({ params }) {
       </Helmet>
       <div className="p-4">
         <Link to="/" className="group gap-1 p-4 font-semibold">
-          <span className="inline-flex cursor-pointer items-center gap-1 rounded-lg bg-[#eee] px-3 py-1.5 text-lightcoral shadow-input hover:bg-lightcoral hover:text-text">
+          <span className="inline-flex cursor-pointer items-center rounded-lg bg-[#eee] px-3 py-1.5 text-lightcoral shadow-field hover:bg-lightcoral hover:text-text active:translate-y-0.5 active:shadow-fieldClick dark:bg-[#85586f] dark:text-text dark:shadow-darkField dark:hover:bg-[#5c527f] dark:active:shadow-darkFieldClick">
             <IoChevronBack />
             Go back
           </span>
         </Link>
-        <h1 className="my-4 w-max px-4 pt-4 text-xl font-bold shadow-input">
+        <h1 className="shadow-input my-4 w-max px-4 pt-4 text-xl font-bold">
           Searching for:{' '}
           <span className="text-lightcoral">{decodeURI(keyword)}</span>
         </h1>

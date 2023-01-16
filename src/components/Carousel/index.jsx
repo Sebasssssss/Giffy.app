@@ -18,7 +18,7 @@ export default function Carousel() {
         </h1>
         <Link
           to="/gif/trending/"
-          className="absolute right-0 -top-1 inline-flex items-center rounded-lg bg-[#eee] px-3 py-1.5 text-lightcoral shadow-input hover:bg-lightcoral hover:text-text"
+          className="absolute right-0 -top-1 inline-flex items-center rounded-lg bg-[#eee] px-3 py-1.5 text-lightcoral shadow-field hover:bg-lightcoral hover:text-text active:translate-y-0.5 active:shadow-fieldClick dark:bg-[#85586f] dark:text-text dark:shadow-darkField dark:hover:bg-[#5c527f] dark:active:shadow-darkFieldClick"
         >
           See more...
         </Link>
@@ -36,7 +36,7 @@ export default function Carousel() {
         </h1>
         <Link
           to="/stickers/trending/"
-          className="absolute right-0 top-7 inline-flex items-center rounded-lg bg-[#eee] px-3 py-1.5 text-lightcoral shadow-input hover:bg-lightcoral hover:text-text"
+          className="absolute right-0 top-7 inline-flex items-center rounded-lg bg-[#eee] px-3 py-1.5 text-lightcoral shadow-field hover:bg-lightcoral hover:text-text active:translate-y-0.5 active:shadow-fieldClick dark:bg-[#85586f] dark:text-text dark:shadow-darkField dark:hover:bg-[#5c527f] dark:active:shadow-darkFieldClick"
         >
           See more...
         </Link>

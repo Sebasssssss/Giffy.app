@@ -1,11 +1,10 @@
 import React from 'react'
 import { Link } from 'wouter'
-import './styles.css'
 
 function Gifs({ title, id, url }) {
   return (
     <>
-      <li className="samina mb-4 overflow-hidden rounded-md bg-[#EAE4E9] text-center transition-all duration-200 group">
+      <li className="group mb-4 overflow-hidden rounded-md bg-[#EAE4E9] text-center shadow-card transition-all duration-200 hover:shadow-cardHover dark:border-[#3E2C41] dark:bg-[#5C527F] dark:shadow-cardDark dark:hover:shadow-cardDarkHover">
         <Link key={id} to={`/gif/${id}`}>
           <img
             src={url}
