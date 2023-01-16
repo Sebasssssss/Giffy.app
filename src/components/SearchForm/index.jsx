@@ -3,12 +3,10 @@ import { FiSearch } from 'react-icons/fi'
 import { useLocation } from 'wouter'
 
 const RATINGS = ['g', 'pg', 'pg-13', 'r']
-const LANGUAGES = ['en', 'es', 'ja', 'it', 'zh', 'ru']
 
 function SearchForm() {
   const [keyword, setKeyword] = useState('')
   const [rating, setRating] = useState(RATINGS[0])
-  const [lang, setLang] = useState(LANGUAGES[0])
   const inputRef = useRef(null)
   const [path, pushLocation] = useLocation()
 
@@ -16,7 +14,7 @@ function SearchForm() {
     e.preventDefault()
     inputRef.current.blur()
     setKeyword('')
-    pushLocation(`/search/${keyword}/${rating}/${lang}`)
+    pushLocation(`/search/${keyword}/${rating}`)
   }
 
   const handleChange = e => {

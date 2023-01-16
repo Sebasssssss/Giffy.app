@@ -20,7 +20,7 @@ export default function App() {
         <Route path="/" component={Home} />
         <Route path="/gif/trending" component={TrendingGifPage} />
         <Route path="/stickers/trending" component={StickersPage} />
-        <Route path="/search/:keyword/:rating?/" component={SearchResults} />
+        <Route path="/search/:keyword/:rating?" component={SearchResults} />
         <Route path="/gif/:id" component={Detail} />
       </div>
       <Footer />

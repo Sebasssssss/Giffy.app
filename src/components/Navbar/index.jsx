@@ -16,7 +16,7 @@ export default function Navbar() {
             Giffy
           </motion.span>
         </Link>
-        <div className="inline-flex items-center gap-3">
+        <div className="inline-flex items-center">
           <ToggleButton />
         </div>
       </nav>
