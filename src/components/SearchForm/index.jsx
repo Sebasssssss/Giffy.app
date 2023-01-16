@@ -45,15 +45,12 @@ function SearchForm() {
               value={rating}
               className="w-14 bg-transparent text-sm font-semibold outline-none"
             >
-              <option className="bg-orange-100 dark:bg-slate-800" disabled>
+              <option className="bg-[#eee] dark:bg-[#5C527F]" disabled>
                 Choose an option!
               </option>
 
               {RATINGS.map(rating => (
-                <option
-                  className="bg-orange-100 dark:bg-slate-800"
-                  key={rating}
-                >
+                <option className="bg-[#eee] dark:bg-[#5C527F]" key={rating}>
                   {rating}
                 </option>
               ))}
