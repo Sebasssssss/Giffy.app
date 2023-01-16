@@ -9,20 +9,18 @@ import SearchResults from './pages/SearchResults'
 import TrendingGifPage from './pages/TrendingGifPage'
 import StickersPage from './pages/StickersPage'
 import './global.css'
+import '../public/global.css'
 
 export default function App() {
   return (
     <>
       <Navbar />
       <Main />
-      <div className="mx-auto mt-16 max-w-6xl rounded-xl border-2 border-gold border-opacity-10 shadow backdrop-blur-lg">
+      <div className="mx-auto mt-16 max-w-6xl rounded-xl">
         <Route path="/" component={Home} />
         <Route path="/gif/trending" component={TrendingGifPage} />
         <Route path="/stickers/trending" component={StickersPage} />
-        <Route
-          path="/search/:keyword/:rating?/:language?"
-          component={SearchResults}
-        />
+        <Route path="/search/:keyword/:rating?/" component={SearchResults} />
         <Route path="/gif/:id" component={Detail} />
       </div>
       <Footer />

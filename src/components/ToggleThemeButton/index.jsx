@@ -41,12 +41,12 @@ function ToggleButton() {
 
   return (
     <div
-      className="switch flex h-6 w-10 cursor-pointer justify-start rounded-[50px] bg-orange-200/50 p-0.5 dark:bg-[#31748f]/50"
+      className="switch flex h-6 w-10 cursor-pointer justify-start rounded-[50px] bg-[#eee] p-0.5 dark:bg-[#31748f]/50"
       data-isMounted={isMounted}
       onClick={toggleTheme}
     >
       <motion.div
-        className="h-5 w-5 rounded-[40px] bg-gold dark:bg-pine"
+        className="h-5 w-5 rounded-[40px] bg-[lightsalmon] content-none dark:bg-pine"
         layout
         transition={spring}
       />

@@ -1,9 +1,10 @@
 import React from 'react'
 import video from '../../assets/mainVideo.mp4'
+import SearchForm from '../../components/SearchForm'
 
 export default function Main() {
   return (
-    <main className="relative h-80 pt-[56px]">
+    <main className="relative h-80 pt-[46px]">
       <div className="absolute flex h-80 w-full flex-col justify-center gap-4 overflow-hidden bg-cover py-5 text-center shadow-black drop-shadow-lg">
         <video
           className="absolute h-[550px] w-full object-cover opacity-30 md:h-full"
@@ -13,12 +14,9 @@ export default function Main() {
           muted
           loop
         />
-        <h1 className="z-10 font-mplus text-4xl font-medium">
-          Giffy{' '}
-          <span className="text-gold transition-colors duration-500 dark:text-pine">
-            app
-          </span>
-        </h1>
+        <div className="z-10 text-2xl">
+          <SearchForm />
+        </div>
       </div>
     </main>
   )

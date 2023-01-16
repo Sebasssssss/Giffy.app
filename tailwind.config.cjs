@@ -17,7 +17,11 @@ module.exports = {
         subtle: '#908caa',
         muted: '#6e6a86',
         text: '#e0def4',
-        love: '#eb6f92'
+        love: '#eb6f92',
+        lightcoral: 'lightcoral'
+      },
+      boxShadow: {
+        input: '0 0.2rem #dfd9d9'
       }
     }
   },

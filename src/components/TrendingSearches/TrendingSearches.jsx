@@ -11,20 +11,21 @@ export default function TrendingSearches() {
   }, [])
   return (
     <>
-      <h1 className="my-4 w-max rounded border border-gold border-opacity-10 bg-gold/40 px-4 py-2 text-xl font-bold shadow dark:border-pine dark:border-opacity-30 dark:bg-pine/50">
-        Trending Searches
+      <h1 className="fancy my-4 text-center font-mplus text-lg font-semibold leading-[0.5]">
+        <span className="relative inline-block">Common gifs</span>
       </h1>
       <div className="flex flex-wrap gap-4 p-4">
         {trends.map(singleTrend => (
           <motion.li
             key={singleTrend}
             whileHover={{ scale: [null, 1.08, 1.05], y: [null, -1.9, -1.5] }}
+            whileTap={{ scale: 0.7 }}
             transition={{ duration: 0.3 }}
             className="list-none"
           >
             <Link
               to={`/search/${singleTrend}`}
-              className="rounded border border-slate-700/20 p-1 hover:border-gold dark:hover:border-pine"
+              className="inline-flex items-center rounded-lg bg-[#eee] px-3 py-1.5 text-lightcoral shadow-input hover:bg-lightcoral hover:text-text"
             >
               {singleTrend}
             </Link>

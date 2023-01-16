@@ -7,14 +7,14 @@ function Stickers({ title, id, url }) {
   return (
     <>
       <li
-        className="mb-4 text-center"
+        className="samina mb-4 rounded-md text-center transition-all duration-200"
         onClick={() => (isModalOpen ? close() : open())}
       >
         <img
           src={url}
           loading="lazy"
           decoding="async"
-          className="h-80 w-full rounded-xl border border-rose object-cover dark:border-overlay md:h-44"
+          className="h-80 w-full object-cover md:h-44"
         />
       </li>
       {isModalOpen && (
