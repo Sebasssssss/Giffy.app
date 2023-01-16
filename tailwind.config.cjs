@@ -9,7 +9,7 @@ module.exports = {
       },
       colors: {
         base: '#191724',
-        text: '#e0def4',
+        text: '#eee',
         lightcoral: 'lightcoral'
       },
       boxShadow: {
