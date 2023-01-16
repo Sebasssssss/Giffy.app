@@ -1,3 +1,22 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+.fancy span:before,
+.fancy span:after {
+  content: '';
+  position: absolute;
+  height: 2px;
+  border-bottom: 1px solid #e0def4;
+  border-top: 1px solid #e0def4;
+  bottom: 3px;
+  width: 100px;
+}
+.fancy span:before {
+  right: 100%;
+  margin-right: 10px;
+}
+.fancy span:after {
+  left: 100%;
+  margin-left: 10px;
+}

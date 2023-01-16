@@ -24,7 +24,7 @@ export default function Home() {
         perferendis consectetur obcaecati fugiat, odio quas non facere dicta
         nisi nobis accusantium! doloribus libero inventore delectus animi quasi
         voluptatibus possimus excepturi,{' '}
-        <span className="inline-flex items-center gap-1 text-lightcoral transition-colors duration-500 dark:text-[#31748f]">
+        <span className="inline-flex items-center gap-1 text-lightcoral transition-colors duration-500 dark:text-[#6e85b2]">
           {' '}
           voluptates et distinctio. Repellat?
           <IoArrowForward />

@@ -28,8 +28,8 @@ function SearchForm() {
   return (
     <>
       <form onSubmit={handleSubmit} className="relative">
-        <div className="inline-flex items-center text-lightcoral/70">
-          <div className="relative inline-flex w-80 items-center gap-1 rounded-2xl bg-[#EAE4E9] px-4 py-2 shadow-input md:w-96">
+        <div className="inline-flex items-center text-lightcoral/70 dark:text-[#F8F9FA]">
+          <div className="relative inline-flex w-80 items-center gap-1 rounded-2xl bg-[#EAE4E9] px-4 py-2 shadow-field dark:bg-[#3E2C41] dark:shadow-dark md:w-96">
             <button>
               <FiSearch className="z-10 h-auto cursor-pointer opacity-60" />
             </button>
@@ -38,7 +38,7 @@ function SearchForm() {
               onChange={handleChange}
               value={keyword}
               ref={inputRef}
-              className="bg-transparent outline-none placeholder:text-lightcoral/50"
+              className="bg-transparent outline-none placeholder:text-lightcoral/50 dark:placeholder:text-[#F8F9FA]/70"
             />
             <select
               onChange={handleChangeRating}
