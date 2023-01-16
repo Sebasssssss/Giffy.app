@@ -1,0 +1,6 @@
+.samina {
+  box-shadow: 3px 5px 2px 1px rgba(0, 0, 255, 0.2);
+}
+.samina:hover {
+  box-shadow: -5px 7px 2px -1px rgba(0, 0, 255, 0.2);
+}

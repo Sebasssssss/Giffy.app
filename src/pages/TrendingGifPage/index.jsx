@@ -30,12 +30,9 @@ export default function TrendingGifPage() {
       <Helmet>
         <title>Trending Gifs | Giffy</title>
       </Helmet>
-      <Link
-        to="/"
-        className="group inline-flex items-center gap-1 p-4 font-semibold"
-      >
-        <IoChevronBack className="text-lg text-[#f6c177] transition-colors duration-500 group-hover:text-[#191724] dark:text-[#31748f] dark:group-hover:text-[#e0def4]" />
-        <span className="transition-colors duration-500 group-hover:text-[#f6c177] dark:group-hover:text-[#31748f]">
+      <Link to="/" className="group gap-1 p-4 font-semibold">
+        <span className="inline-flex cursor-pointer items-center gap-1 rounded-lg bg-[#eee] px-3 py-1.5 text-lightcoral shadow-input hover:bg-lightcoral hover:text-text">
+          <IoChevronBack />
           Go back
         </span>
       </Link>
