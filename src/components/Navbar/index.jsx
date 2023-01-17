@@ -11,7 +11,7 @@ export default function Navbar() {
           <motion.span
             whileHover={{ scale: [null, 1.2, 1.1] }}
             whileTap={{ scale: 1.1 }}
-            className="cursor-pointer px-2 pt-1.5 font-mplus text-lg font-bold"
+            className="cursor-pointer px-2 font-mplus text-lg font-bold"
           >
             Giffy
           </motion.span>
