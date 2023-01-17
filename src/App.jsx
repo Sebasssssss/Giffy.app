@@ -16,7 +16,7 @@ export default function App() {
     <>
       <Navbar />
       <Main />
-      <div className="mx-auto mt-16 max-w-6xl rounded-xl">
+      <div className="mx-auto mt-16 max-w-6xl rounded-xl px-4">
         <Route path="/" component={Home} />
         <Route path="/gif/trending" component={TrendingGifPage} />
         <Route path="/stickers/trending" component={StickersPage} />
