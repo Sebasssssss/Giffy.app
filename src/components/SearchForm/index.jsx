@@ -29,7 +29,7 @@ function SearchForm() {
     <>
       <form onSubmit={handleSubmit} className="relative">
         <div className="inline-flex items-center text-lightcoral/70 dark:text-[#F8F9FA]">
-          <div className="relative inline-flex w-80 items-center gap-1 rounded-2xl bg-[#EAE4E9] px-4 py-2 shadow-field dark:bg-[#3E2C41] dark:shadow-dark md:w-96">
+          <div className="relative inline-flex w-80 items-center gap-1 rounded-2xl bg-[#EAE4E9] px-4 py-2 shadow-field dark:bg-[#85586f] dark:shadow-darkField md:w-96">
             <button>
               <FiSearch className="z-10 h-auto cursor-pointer opacity-60" />
             </button>
@@ -43,7 +43,7 @@ function SearchForm() {
             <select
               onChange={handleChangeRating}
               value={rating}
-              className="w-14 bg-transparent text-sm font-semibold outline-none"
+              className="absolute right-0 w-14 bg-transparent text-sm font-semibold outline-none"
             >
               <option className="bg-[#eee] dark:bg-[#5C527F]" disabled>
                 Choose an option!

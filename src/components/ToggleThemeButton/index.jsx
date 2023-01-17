@@ -1,6 +1,5 @@
 import React, { useState, useEffect } from 'react'
 import { motion } from 'framer-motion'
-import { IoSunny, IoMoon } from 'react-icons/io5'
 import './styles.css'
 
 function ToggleButton() {
@@ -46,10 +45,6 @@ function ToggleButton() {
       data-isMounted={isMounted}
       onClick={toggleTheme}
     >
-      <div className="absolute top-1.5 inline-flex items-center gap-1.5 text-sm opacity-80">
-        <IoSunny />
-        <IoMoon />
-      </div>
       <motion.div
         className="z-10 h-5 w-5 rounded-[40px] bg-[lightsalmon] content-none dark:bg-[#6e85b2]"
         layout

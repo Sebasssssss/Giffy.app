@@ -30,14 +30,16 @@ export default function TrendingGifPage() {
       <Helmet>
         <title>Trending Gifs | Giffy</title>
       </Helmet>
-      <Link to="/" className="group gap-1 p-4 font-semibold">
-        <span className="inline-flex cursor-pointer items-center rounded-lg bg-[#eee] px-3 py-1.5 text-lightcoral shadow-field hover:bg-lightcoral hover:text-text active:translate-y-0.5 active:shadow-fieldClick dark:bg-[#85586f] dark:text-text dark:shadow-darkField dark:hover:bg-[#5c527f] dark:active:shadow-darkFieldClick">
-          <IoChevronBack />
-          Go back
-        </span>
-      </Link>
-      <h1 className="my-4 px-4 text-xl font-bold underline decoration-zinc-400 decoration-4 underline-offset-4 dark:decoration-zinc-700">
-        Trending Gifs
+      <div className="pb-4">
+        <Link to="/" className="group font-semibold">
+          <span className="inline-flex cursor-pointer items-center rounded-lg bg-[#eee] px-3 py-1.5 text-lightcoral shadow-field hover:bg-lightcoral hover:text-text active:translate-y-0.5 active:shadow-fieldClick dark:bg-[#85586f] dark:text-text dark:shadow-darkField dark:hover:bg-[#5c527f] dark:active:shadow-darkFieldClick">
+            <IoChevronBack />
+            Go back
+          </span>
+        </Link>
+      </div>
+      <h1 className="fancy pb-4 text-center font-mplus text-lg font-semibold leading-[0.5]">
+        <span className="relative inline-block">Trending Gifs</span>
       </h1>
       <motion.ul
         initial={{ opacity: 0, scale: 0.95, y: 100 }}

@@ -16,7 +16,7 @@ export default function Home() {
       <Helmet>
         <title>Home | Giffy</title>
       </Helmet>
-      <p className="mx-auto rounded p-5">
+      <p className="mx-auto rounded pt-4 pb-10">
         Lorem ipsum dolor sit amet consectetur adipisicing elit. Corrupti id
         nihil, at dolorum eaque maiores quia amet sit eius libero nulla ipsam
         perferendis consectetur obcaecati fugiat, odio quas non facere dicta
@@ -43,7 +43,7 @@ export default function Home() {
               ease: [0, 0.71, 0.2, 1.01]
             }}
           >
-            <div className="relative px-4">
+            <div className="relative">
               <Carousel />
               <div className="mt-8 py-4">
                 <h1 className="fancy text-center font-mplus text-lg font-semibold leading-[0.5]">
