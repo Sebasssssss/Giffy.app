@@ -39,9 +39,11 @@ export default function SearchResults({ params }) {
           Go back
         </span>
       </Link>
-      <h1 className="shadow-input my-4 w-max pt-4 text-xl font-bold">
-        Searching for:{' '}
-        <span className="text-lightcoral">{decodeURI(keyword)}</span>
+      <h1 className="fancy pb-4 text-center font-mplus text-lg font-semibold leading-[0.5]">
+        <span className="relative inline-block">
+          Searching for: {''}
+          <span className="text-lightcoral">{decodeURI(keyword)}</span>
+        </span>
       </h1>
       <motion.div
         initial={{ opacity: 0, scale: 0.95, y: 100 }}
