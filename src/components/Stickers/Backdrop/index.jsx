@@ -9,7 +9,7 @@ export default function Backdrop({ children, onClick }) {
       animate={{ opacity: 1 }}
       exit={{ opacity: 0 }}
       transition={{ duration: 0.2 }}
-      className="fixed top-0 left-0 z-20 grid h-full w-full items-center justify-center bg-black/60"
+      className="fixed top-0 left-0 z-10 grid h-full w-full items-center justify-center bg-black/60 backdrop-blur-md"
     >
       {children}
     </motion.div>
