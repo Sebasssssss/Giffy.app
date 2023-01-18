@@ -6,7 +6,7 @@ import { motion } from 'framer-motion'
 export default function Navbar() {
   return (
     <header className="fixed z-10 w-full p-2 backdrop-blur-md">
-      <nav className="mx-auto flex max-w-6xl justify-between">
+      <nav className="mx-auto flex max-w-6xl justify-between p-1">
         <Link to="/" className="text-center tracking-tighter outline-none">
           <motion.span
             whileHover={{ scale: [null, 1.2, 1.1] }}
