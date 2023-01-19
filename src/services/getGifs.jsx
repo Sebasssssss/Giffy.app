@@ -2,7 +2,7 @@ import { API_KEY, API_URL } from './settings'
 
 export default async function getGifs({
   keyword = 'random',
-  limit = 10,
+  limit = 12,
   rating = 'g',
   page = 0,
   language = 'es'

@@ -42,7 +42,7 @@ function ToggleButton() {
   return (
     <div
       className="switch relative flex h-6 w-10 cursor-pointer justify-start rounded-[50px] bg-[#eee] p-0.5 shadow-switch dark:bg-[#5c527f]/70 dark:shadow-darkField"
-      data-isMounted={isMounted}
+      data-ismounted={isMounted}
       onClick={toggleTheme}
     >
       <motion.div

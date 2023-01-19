@@ -1,26 +1,27 @@
-import { useState, useEffect } from 'react'
+import { useEffect, useState } from 'react'
 import getGifs from '../services/getGifs'
 
 const INITIAL_PAGE = 0
 
-export function useGifs({ keyword, rating, language } = { keyword: null }) {
-  const [gifs, setGifs] = useState([])
-  const [page, setPage] = useState(INITIAL_PAGE)
+export function useGifs({ keyword, rating } = { keyword: null }) {
   const [loading, setLoading] = useState(false)
   const [loadingNextPage, setLoadingNextPage] = useState(false)
+  const [page, setPage] = useState(INITIAL_PAGE)
+  const [gifs, setGifs] = useState([])
   const keywordToUse =
     keyword || localStorage.getItem('lastKeyword') || 'random'
 
   useEffect(
     function () {
       setLoading(true)
-      getGifs({ keyword: keywordToUse, rating, language }).then(gifs => {
+
+      getGifs({ keyword: keywordToUse, rating }).then(gifs => {
         setGifs(gifs)
         setLoading(false)
         localStorage.setItem('lastKeyword', keyword)
       })
     },
-    [keyword, keywordToUse, setGifs, rating, language]
+    [keyword, keywordToUse, rating, setGifs]
   )
 
   useEffect(
@@ -29,15 +30,13 @@ export function useGifs({ keyword, rating, language } = { keyword: null }) {
 
       setLoadingNextPage(true)
 
-      getGifs({ keyword: keywordToUse, page, rating, language }).then(
-        nextGifs => {
-          setGifs(prevGifs => prevGifs.concat(nextGifs))
-          setLoadingNextPage(false)
-        }
-      )
+      getGifs({ keyword: keywordToUse, page, rating }).then(nextGifs => {
+        setGifs(prevGifs => prevGifs.concat(nextGifs))
+        setLoadingNextPage(false)
+      })
     },
-    [page, keywordToUse, setGifs, rating, language]
+    [keywordToUse, page, rating, setGifs]
   )
 
-  return { gifs, loadingNextPage, setPage, loading }
+  return { loading, loadingNextPage, gifs, setPage }
 }

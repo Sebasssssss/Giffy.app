@@ -7,8 +7,8 @@ const RATINGS = ['g', 'pg', 'pg-13', 'r']
 function SearchForm() {
   const [keyword, setKeyword] = useState('')
   const [rating, setRating] = useState(RATINGS[0])
-  const inputRef = useRef(null)
   const [path, pushLocation] = useLocation()
+  const inputRef = useRef(null)
 
   const handleSubmit = e => {
     e.preventDefault()

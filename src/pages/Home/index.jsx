@@ -3,7 +3,7 @@ import ListOfGifs from '../../components/ListOfGifs'
 import LazyTrending from '../../components/TrendingSearches'
 import Carousel from '../../components/Carousel'
 import { Helmet } from 'react-helmet'
-import { IoArrowForward } from 'react-icons/io5/'
+import { IoArrowDown, IoArrowForward } from 'react-icons/io5/'
 import { motion } from 'framer-motion'
 import { useGifs } from '../../hooks/useGif'
 import Loader from '../../components/Loader'
@@ -47,7 +47,9 @@ export default function Home() {
               <Carousel />
               <div className="mt-8 py-4">
                 <h1 className="fancy text-center font-mplus text-lg font-semibold leading-[0.5]">
-                  <span className="relative inline-block">Common gifs</span>
+                  <span className="relative inline-flex items-center gap-2">
+                    <IoArrowDown /> Last search <IoArrowDown />
+                  </span>
                 </h1>
               </div>
               <ListOfGifs gifs={gifs} />

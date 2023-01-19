@@ -12,7 +12,7 @@ export default function TrendingSearches() {
   return (
     <>
       <h1 className="fancy my-4 text-center font-mplus text-lg font-semibold leading-[0.5]">
-        <span className="relative inline-block">Common gifs</span>
+        <span className="relative inline-block">Trending Searches</span>
       </h1>
       <div className="flex flex-wrap gap-4 p-4">
         {trends.map(singleTrend => (
