@@ -2,7 +2,8 @@ import React from 'react'
 import {
   AiFillInstagram,
   AiOutlineTwitter,
-  AiFillYoutube
+  AiFillYoutube,
+  AiFillGithub
 } from 'react-icons/ai'
 import { BsTwitch } from 'react-icons/bs'
 import { motion } from 'framer-motion'
@@ -39,6 +40,7 @@ export default function Footer() {
           <AiOutlineTwitter />
         </motion.a>
         <motion.a
+          href="https://github.com/Sebasssssss"
           animate={{ opacity: 0.5 }}
           whileHover={{
             scale: [null, 1.2, 1.1],
@@ -46,9 +48,8 @@ export default function Footer() {
             opacity: 1
           }}
           transition={{ duration: 0.3 }}
-          href="#"
         >
-          <BsTwitch />
+          <AiFillGithub />
         </motion.a>
         <motion.a
           animate={{ opacity: 0.5 }}
