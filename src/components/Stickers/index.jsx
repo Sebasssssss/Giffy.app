@@ -18,16 +18,19 @@ function Stickers({ title, id, url }) {
           className="h-80 w-full object-cover md:h-44"
         />
       </div>
-      <AnimatePresence exitBeforeEnter={true} initial={false}>
+      <AnimatePresence mode="wait" initial={false}>
         {isModalOpen && (
           <Modal handleClose={close}>
-            <img
-              key={id}
-              src={url}
-              loading="lazy"
-              decoding="async"
-              className="w-80 rounded-xl object-cover"
-            />
+            <div className="flex flex-col items-center">
+              <img
+                key={id}
+                src={url}
+                loading="lazy"
+                decoding="async"
+                className="w-72 rounded-xl object-cover"
+              />
+              <h1 className="py-2 text-xl font-bold">{title}</h1>
+            </div>
           </Modal>
         )}
       </AnimatePresence>
