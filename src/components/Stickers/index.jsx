@@ -1,3 +1,4 @@
+import { AnimatePresence } from 'framer-motion'
 import React from 'react'
 import Modal from '../../components/Stickers/Modal'
 import useModal from '../../hooks/useModal'
@@ -17,17 +18,19 @@ function Stickers({ title, id, url }) {
           className="h-80 w-full object-cover md:h-44"
         />
       </div>
-      {isModalOpen && (
-        <Modal handleClose={close}>
-          <img
-            key={id}
-            src={url}
-            loading="lazy"
-            decoding="async"
-            className="w-80 rounded-xl object-cover"
-          />
-        </Modal>
-      )}
+      <AnimatePresence exitBeforeEnter={true} initial={false}>
+        {isModalOpen && (
+          <Modal handleClose={close}>
+            <img
+              key={id}
+              src={url}
+              loading="lazy"
+              decoding="async"
+              className="w-80 rounded-xl object-cover"
+            />
+          </Modal>
+        )}
+      </AnimatePresence>
     </>
   )
 }
