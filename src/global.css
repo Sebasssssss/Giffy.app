@@ -22,3 +22,11 @@
   left: 100%;
   margin-left: 10px;
 }
+
+.alice-carousel__dots-item:not(.custom) {
+  background-color: #5c527f;
+}
+
+.alice-carousel__dots-item:not(.__custom).__active {
+  background-color: lightcoral;
+}
