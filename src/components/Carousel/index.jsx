@@ -1,7 +1,6 @@
 import React from 'react'
 import AliceCarousel from 'react-alice-carousel'
-import TitleGifCarousel from '../../components/TitleGifCarousel'
-import TitleStickersCarousel from '../../components/TitleStickersCarousel'
+import TitlesCarousel from '../../components/TitlesCarousel'
 import carouselHook from './hook'
 import 'react-alice-carousel/lib/alice-carousel.css'
 
@@ -10,7 +9,7 @@ function Carousel() {
 
   return (
     <>
-      <TitleGifCarousel />
+      <TitlesCarousel title="Trending Gifs" to="gif" />
       <AliceCarousel
         mouseTracking
         items={trendingGifItems}
@@ -19,7 +18,7 @@ function Carousel() {
         infinite={true}
       />
 
-      <TitleStickersCarousel />
+      <TitlesCarousel title="Trending Stickers" to="stickers" />
       <AliceCarousel
         mouseTracking
         items={trendingStickerItems}
