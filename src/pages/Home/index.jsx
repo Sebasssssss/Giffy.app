@@ -26,17 +26,15 @@ export default function Home() {
           ease: [0, 0.71, 0.2, 1.01]
         }}
       >
-        <div className="relative">
-          <Carousel />
-          <div className="mt-8 py-4">
-            <h1 className="fancy text-center font-mplus text-lg font-semibold leading-[0.5]">
-              <span className="relative inline-flex items-center gap-2">
-                <IoArrowDown /> Last search <IoArrowDown />
-              </span>
-            </h1>
-          </div>
-          <ListOfGifs gifs={gifs} />
+        <Carousel />
+        <div className="mt-8 py-4">
+          <h1 className="fancy text-center font-mplus text-lg font-semibold leading-[0.5]">
+            <span className="relative inline-flex items-center gap-2">
+              <IoArrowDown /> Last search <IoArrowDown />
+            </span>
+          </h1>
         </div>
+        <ListOfGifs gifs={gifs} />
       </motion.div>
       <LazyTrending />
     </>

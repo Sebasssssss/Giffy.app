@@ -22,7 +22,7 @@ function Carousel() {
         disableButtonsControls={true}
         infinite={true}
       />
-      <div className="relative py-4 pt-14 text-center sm:pt-8">
+      <div className="relative py-4 text-center">
         <h1 className="fancy pb-4 text-center font-mplus text-lg font-semibold leading-[0.5]">
           <span className="relative inline-block">Trending Stickers</span>
         </h1>
