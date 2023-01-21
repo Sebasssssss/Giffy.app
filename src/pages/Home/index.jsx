@@ -3,9 +3,9 @@ import ListOfGifs from '../../components/ListOfGifs'
 import LazyTrending from '../../components/TrendingSearches'
 import HomeIntroduction from '../../components/HomeIntroduction'
 import Carousel from '../../components/Carousel'
-import { Helmet } from 'react-helmet'
 import LastSearchTitle from '../../components/LastSearchTitle'
 import AnimateIn from '../../components/AnimateIn'
+import { Helmet } from 'react-helmet'
 import { useGifs } from '../../hooks/useGif'
 
 export default function Home() {

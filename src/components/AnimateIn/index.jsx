@@ -30,6 +30,7 @@ export default function AnimateIn({ children, ...restProps }) {
       variants={variants}
       initial="hidden"
       animate="show"
+      exit="exit"
       {...restProps}
     >
       {children}
