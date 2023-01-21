@@ -4,7 +4,7 @@ import { Link } from 'wouter'
 import 'react-alice-carousel/lib/alice-carousel.css'
 import carouselHook from './hook'
 
-export default function Carousel() {
+function Carousel() {
   const { trendingStickerItems, trendingGifItems, responsive } = carouselHook()
 
   return (
@@ -48,3 +48,5 @@ export default function Carousel() {
     </>
   )
 }
+
+export default React.memo(Carousel)
