@@ -1,12 +1,12 @@
 import React from 'react'
 import ListOfGifs from '../../components/ListOfGifs'
 import LazyTrending from '../../components/TrendingSearches'
+import HomeIntroduction from '../../components/HomeIntroduction'
 import Carousel from '../../components/Carousel'
 import { Helmet } from 'react-helmet'
 import { IoArrowDown } from 'react-icons/io5/'
 import { motion } from 'framer-motion'
 import { useGifs } from '../../hooks/useGif'
-import HomeIntroduction from '../../components/HomeIntroduction'
 
 export default function Home() {
   const { gifs } = useGifs()

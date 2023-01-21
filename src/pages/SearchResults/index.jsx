@@ -9,7 +9,7 @@ import { Link } from 'wouter'
 import { IoChevronBack } from 'react-icons/io5/'
 
 export default function SearchResults({ params }) {
-  const { keyword, rating = 'g' } = params
+  const { keyword, rating } = params
   const { gifs, setPage } = useGifs({ keyword, rating })
   const externalRef = useRef()
   const { isNearScreen } = useNearScreen({ externalRef, once: false })

@@ -18,4 +18,6 @@ function TrendingGifs({ id, url }) {
   )
 }
 
-export default React.memo(TrendingGifs)
+export default React.memo(TrendingGifs, (prevProps, nextProps) => {
+  return prevProps.id === nextProps.id
+})

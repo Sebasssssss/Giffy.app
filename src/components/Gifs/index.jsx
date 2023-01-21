@@ -19,4 +19,6 @@ function Gifs({ title, id, url }) {
   )
 }
 
-export default React.memo(Gifs)
+export default React.memo(Gifs, (prevProps, nextProps) => {
+  return prevProps.id === nextProps.id
+})

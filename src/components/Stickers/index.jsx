@@ -38,4 +38,6 @@ function Stickers({ title, id, url }) {
   )
 }
 
-export default React.memo(Stickers)
+export default React.memo(Stickers, (prevProps, nextProps) => {
+  return prevProps.id === nextProps.id
+})
