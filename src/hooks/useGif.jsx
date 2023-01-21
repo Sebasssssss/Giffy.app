@@ -4,7 +4,6 @@ import getGifs from '../services/getGifs'
 const INITIAL_PAGE = 0
 
 export function useGifs({ keyword, rating } = { keyword: null }) {
-  const [loading, setLoading] = useState(false)
   const [loadingNextPage, setLoadingNextPage] = useState(false)
   const [page, setPage] = useState(INITIAL_PAGE)
   const [gifs, setGifs] = useState([])
@@ -12,11 +11,8 @@ export function useGifs({ keyword, rating } = { keyword: null }) {
 
   useEffect(
     function () {
-      setLoading(true)
-
       getGifs({ keyword: keywordToUse, rating }).then(gifs => {
         setGifs(gifs)
-        setLoading(false)
         localStorage.setItem('lastKeyword', keyword)
       })
     },
@@ -37,5 +33,5 @@ export function useGifs({ keyword, rating } = { keyword: null }) {
     [keywordToUse, page, rating, setGifs]
   )
 
-  return { loading, loadingNextPage, gifs, setPage }
+  return { loadingNextPage, gifs, setPage }
 }
