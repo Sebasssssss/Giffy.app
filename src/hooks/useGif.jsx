@@ -8,8 +8,7 @@ export function useGifs({ keyword, rating } = { keyword: null }) {
   const [loadingNextPage, setLoadingNextPage] = useState(false)
   const [page, setPage] = useState(INITIAL_PAGE)
   const [gifs, setGifs] = useState([])
-  const keywordToUse =
-    keyword || localStorage.getItem('lastKeyword') || 'random'
+  const keywordToUse = keyword || localStorage.getItem('lastKeyword')
 
   useEffect(
     function () {

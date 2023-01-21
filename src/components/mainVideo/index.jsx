@@ -4,7 +4,7 @@ import SearchForm from '../../components/SearchForm'
 
 export default function Main() {
   return (
-    <main className="relative h-80 pt-[40px]">
+    <main className="relative h-80 pt-[50px]">
       <div className="absolute flex h-80 w-full flex-col justify-center gap-4 overflow-hidden bg-cover py-5 text-center shadow-black drop-shadow-lg">
         <video
           className="absolute h-[550px] w-full object-cover opacity-30 md:h-full"
