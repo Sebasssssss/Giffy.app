@@ -1,5 +1,5 @@
 import React from 'react'
-import video from '../../assets/mainVideo.mp4'
+import video from '../../assets/videoMain.mp4'
 import SearchForm from '../../components/SearchForm'
 
 export default function Main() {
