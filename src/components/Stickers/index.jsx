@@ -11,12 +11,7 @@ function Stickers({ title, id, url }) {
         className="mb-4 flex cursor-pointer items-center overflow-hidden rounded-md border border-blue-900/20 text-center shadow-card transition-all duration-200 hover:shadow-cardHover dark:border-[#3E2C41] dark:shadow-cardDark dark:hover:shadow-cardDarkHover"
         onClick={() => (isModalOpen ? close() : open())}
       >
-        <img
-          src={url}
-          loading="lazy"
-          decoding="async"
-          className="h-80 w-full object-cover md:h-44"
-        />
+        <img src={url} className="h-80 w-full object-cover md:h-44" />
       </div>
       <AnimatePresence mode="wait" initial={false}>
         {isModalOpen && (

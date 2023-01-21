@@ -1,12 +1,12 @@
 import React, { useEffect, useRef, useCallback } from 'react'
-import { useGifs } from '../../hooks/useGif'
+import AnimateIn from '../../components/AnimateIn'
+import ListOfGifs from '../../components/ListOfGifs'
 import useNearScreen from '../../hooks/useNearScreen'
 import debounce from 'just-debounce-it'
 import { Helmet } from 'react-helmet'
-import ListOfGifs from '../../components/ListOfGifs'
-import { motion } from 'framer-motion'
 import { Link } from 'wouter'
 import { IoChevronBack } from 'react-icons/io5/'
+import { useGifs } from '../../hooks/useGif'
 
 export default function SearchResults({ params }) {
   const { keyword, rating } = params
@@ -45,18 +45,10 @@ export default function SearchResults({ params }) {
           <span className="text-lightcoral">{decodeURI(keyword)}</span>
         </span>
       </h1>
-      <motion.div
-        initial={{ opacity: 0, scale: 0.95, y: 100 }}
-        animate={{ opacity: 1, scale: 1, y: 0 }}
-        transition={{
-          duration: 0.8,
-          delay: 0.5,
-          ease: [0, 0.71, 0.2, 1.01]
-        }}
-      >
+      <AnimateIn>
         <ListOfGifs gifs={gifs} />
-      </motion.div>
-      <div id="visor" ref={externalRef}></div>
+      </AnimateIn>
+      <div ref={externalRef}></div>
     </>
   )
 }

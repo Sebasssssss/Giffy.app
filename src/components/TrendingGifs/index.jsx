@@ -8,8 +8,6 @@ function TrendingGifs({ id, url }) {
         <Link key={id} to={`/gif/${id}`}>
           <img
             src={url}
-            loading="lazy"
-            decoding="async"
             className="h-80 w-full rounded-md object-cover md:h-44"
           />
         </Link>
