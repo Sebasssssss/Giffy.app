@@ -25,9 +25,9 @@ export default function Detail({ params }) {
       >
         <img
           src={gif.url}
-          className="mb-8 w-full rounded-xl border border-blue-900/20 shadow-card dark:border-[#3E2C41] dark:shadow-cardDark"
+          className="mb-8 w-full rounded-xl border border-blue-900/20"
         />
-        <div className="flex flex-col border-b border-base dark:border-[#eee]">
+        <div className="flex flex-col border-b border-base">
           <h1 className="text-left font-mplus text-3xl">{gif.title}</h1>
           <h1 className="py-2 pb-4 text-left">{gif.title}</h1>
         </div>

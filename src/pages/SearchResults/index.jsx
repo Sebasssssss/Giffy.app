@@ -1,12 +1,10 @@
 import React, { useEffect, useRef, useCallback } from 'react'
-import AnimateIn from '../../components/AnimateIn'
 import ListOfGifs from '../../components/ListOfGifs'
 import useNearScreen from '../../hooks/useNearScreen'
 import debounce from 'just-debounce-it'
 import { Helmet } from 'react-helmet'
-import { Link } from 'wouter'
-import { IoChevronBack } from 'react-icons/io5/'
 import { useGifs } from '../../hooks/useGif'
+import GoBackButton from '../../components/GoBackButton'
 
 export default function SearchResults({ params }) {
   const { keyword, rating } = params
@@ -33,21 +31,14 @@ export default function SearchResults({ params }) {
       <Helmet>
         <title>{title} | Giffy</title>
       </Helmet>
-      <Link to="/" className="group font-semibold">
-        <span className="inline-flex cursor-pointer items-center rounded-lg bg-[#eee] px-3 py-1.5 text-lightcoral shadow-field hover:bg-lightcoral hover:text-text active:translate-y-0.5 active:shadow-fieldClick dark:bg-[#85586f] dark:text-text dark:shadow-darkField dark:hover:bg-[#5c527f] dark:active:shadow-darkFieldClick">
-          <IoChevronBack />
-          Go back
-        </span>
-      </Link>
+      <GoBackButton />
       <h1 className="fancy pb-4 text-center font-mplus text-lg font-semibold leading-[0.5]">
         <span className="relative inline-block">
           Searching for: {''}
           <span className="text-lightcoral">{decodeURI(keyword)}</span>
         </span>
       </h1>
-      <AnimateIn>
-        <ListOfGifs gifs={gifs} />
-      </AnimateIn>
+      <ListOfGifs gifs={gifs} />
       <div ref={externalRef}></div>
     </>
   )

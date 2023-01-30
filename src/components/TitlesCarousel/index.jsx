@@ -9,7 +9,10 @@ function TitleCarousel({ title, to }) {
       </h1>
       <Link
         to={`/${to}/trending/`}
-        className="absolute -right-2 top-0 inline-flex items-center rounded-lg bg-[#eee] px-3 py-1.5 text-lightcoral shadow-field hover:bg-lightcoral hover:text-text active:translate-y-0.5 active:shadow-fieldClick dark:bg-[#85586f] dark:text-text dark:shadow-darkField dark:hover:bg-[#5c527f] dark:active:shadow-darkFieldClick sm:right-0"
+        className="absolute -right-2 top-0 w-28 justify-center
+        gap-2 rounded bg-[#00FFFF]/70 py-2.5 text-sm font-semibold uppercase
+        tracking-[1px] text-slate-900 shadow-button transition-all duration-300
+        hover:scale-[1.02] hover:bg-[#00ddff] hover:shadow-buttonHover sm:right-0"
       >
         See more...
       </Link>

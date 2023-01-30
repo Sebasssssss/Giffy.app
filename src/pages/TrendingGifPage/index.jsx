@@ -5,7 +5,6 @@ import useNearScreen from '../../hooks/useNearScreen'
 import useTrendingGif from '../../hooks/useTrendingGif'
 import debounce from 'just-debounce-it'
 import { Helmet } from 'react-helmet'
-import AnimateIn from '../../components/AnimateIn'
 
 export default function TrendingGifPage() {
   const { trendingGifs, setPage } = useTrendingGif()
@@ -33,9 +32,9 @@ export default function TrendingGifPage() {
       <h1 className="fancy pb-4 text-center font-mplus text-lg font-semibold leading-[0.5]">
         <span className="relative inline-block">Trending Gifs</span>
       </h1>
-      <AnimateIn className="grid grid-cols-1 gap-4 p-4 md:grid-cols-2 lg:grid-cols-3">
+      <div className="grid grid-cols-1 gap-4 p-4 md:grid-cols-2 lg:grid-cols-3">
         <ListOfTrendingGifs trendingGifs={trendingGifs} />
-      </AnimateIn>
+      </div>
       <div ref={externalRef}></div>
     </>
   )

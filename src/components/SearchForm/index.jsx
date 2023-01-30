@@ -28,29 +28,27 @@ function SearchForm() {
   return (
     <>
       <form onSubmit={handleSubmit} className="relative">
-        <div className="inline-flex items-center text-lightcoral/70 dark:text-[#F8F9FA]">
-          <div className="relative inline-flex w-80 items-center gap-1 rounded-2xl bg-[#EAE4E9] px-4 py-2 shadow-field dark:bg-[#85586f] dark:shadow-darkField md:w-96">
-            <button className="mt-0.5">
-              <FiSearch className="z-10 h-auto cursor-pointer opacity-60" />
-            </button>
+        <div className="group inline-flex items-center text-[#F8F9FA]">
+          <div className="gap-1md:w-96 inline-flex w-80 items-center">
+            <FiSearch className="absolute left-2 top-3 z-10 h-auto cursor-pointer opacity-60" />
             <input
               placeholder="Search!"
               onChange={handleChange}
               value={keyword}
               ref={inputRef}
-              className="bg-transparent px-1 outline-none placeholder:text-lightcoral/50 dark:placeholder:text-[#F8F9FA]/70"
+              className="group relative rounded-xl border border-slate-700 bg-transparent py-2 pl-[2.5rem] outline-none focus:shadow-searchForm focus:transition-shadow focus:duration-100"
             />
             <select
               onChange={handleChangeRating}
               value={rating}
-              className="absolute right-0 w-14 bg-transparent text-sm font-semibold outline-none"
+              className="invisible absolute right-4 w-14 bg-transparent text-sm font-semibold outline-none group-hover:visible"
             >
-              <option className="bg-[#eee] dark:bg-[#5C527F]" disabled>
+              <option className="text-base" disabled>
                 Choose an option!
               </option>
 
               {RATINGS.map(rating => (
-                <option className="bg-[#eee] dark:bg-[#5C527F]" key={rating}>
+                <option className="text-base" key={rating}>
                   {rating}
                 </option>
               ))}

@@ -1,16 +1,15 @@
 import React from 'react'
 import { Link } from 'wouter'
 
-function TrendingGifs({ id, url }) {
+function TrendingGifs({ title, id, url }) {
   return (
     <>
-      <div className="mb-4 cursor-pointer rounded-md border border-blue-900/20 text-center shadow-card transition-all duration-200 hover:shadow-cardHover dark:border-[#3E2C41] dark:shadow-cardDark dark:hover:shadow-cardDarkHover">
+      <div className="relative mb-4 h-80 overflow-hidden rounded-[1rem] border border-slate-700 text-center text-text shadow-md shadow-slate-700 md:h-44">
         <Link key={id} to={`/gif/${id}`}>
-          <img
-            src={url}
-            alt={id}
-            className="h-80 w-full rounded-md object-cover md:h-44"
-          />
+          <img src={url} alt={id} className="h-full w-full object-cover" />
+          <h1 className="text-md absolute -bottom-1 left-0 w-full bg-slate-900/40 py-1.5 font-bold backdrop-blur-md">
+            {title}
+          </h1>
         </Link>
       </div>
     </>

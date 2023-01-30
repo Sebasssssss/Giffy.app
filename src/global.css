@@ -24,9 +24,9 @@
 }
 
 .alice-carousel__dots-item:not(.custom) {
-  background-color: #5c527f;
+  background-color: #00ddff;
 }
 
 .alice-carousel__dots-item:not(.__custom).__active {
-  background-color: lightcoral;
+  background-color: white;
 }

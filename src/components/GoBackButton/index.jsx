@@ -5,11 +5,15 @@ import { Link } from 'wouter'
 function GoBackButton() {
   return (
     <div className="pb-4">
-      <Link to="/" className="group font-semibold">
-        <span className="inline-flex cursor-pointer items-center rounded-lg bg-[#eee] px-3 py-1.5 text-lightcoral shadow-field hover:bg-lightcoral hover:text-text active:translate-y-0.5 active:shadow-fieldClick dark:bg-[#85586f] dark:text-text dark:shadow-darkField dark:hover:bg-[#5c527f] dark:active:shadow-darkFieldClick">
-          <IoChevronBack />
-          Go back
-        </span>
+      <Link
+        to="/"
+        className="inline-flex w-28 items-center justify-center
+        gap-2 rounded bg-[#00FFFF]/70 py-3 text-sm font-semibold uppercase
+        tracking-[1px] text-slate-900 shadow-button transition-all duration-300
+        hover:scale-[1.02] hover:bg-[#00ddff] hover:shadow-buttonHover"
+      >
+        <IoChevronBack />
+        <span>Go back</span>
       </Link>
     </div>
   )

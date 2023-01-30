@@ -4,14 +4,12 @@ import { Link } from 'wouter'
 function Gifs({ title, id, url }) {
   return (
     <>
-      <li className="group mb-4 overflow-hidden rounded-md bg-[#EAE4E9] text-center shadow-card transition-all duration-200 hover:shadow-cardHover dark:border-[#3E2C41] dark:bg-[#5C527F] dark:shadow-cardDark dark:hover:shadow-cardDarkHover">
+      <li className="relative mb-4 h-80 overflow-hidden rounded-[1rem] border border-slate-700 text-center text-text shadow-md shadow-slate-700 md:h-44">
         <Link key={id} to={`/gif/${id}`}>
-          <img
-            src={url}
-            className="h-80 w-full object-cover md:h-44"
-            alt={title}
-          />
-          <h1 className="py-2 text-xl font-bold">{title}</h1>
+          <img src={url} className="h-full w-full object-cover" alt={title} />
+          <h1 className="text-md absolute -bottom-1 left-0 z-10 w-full bg-slate-900/40 py-1.5 font-bold backdrop-blur-sm">
+            {title}
+          </h1>
         </Link>
       </li>
     </>

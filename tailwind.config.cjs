@@ -13,17 +13,13 @@ module.exports = {
         lightcoral: 'lightcoral'
       },
       boxShadow: {
-        field: '0 0.2rem #dfd9d9',
-        fieldClick: '0 0.1rem #dfd9d9',
-        darkField: '0 0.2rem #3E2C41',
-        darkFieldClick: '0 0.1rem #3E2C41',
-        switch: '0 0.2em #dfd9d9',
-        dark: '0 0.2rem #5C527F',
-        card: '3px 5px 2px 1px rgba(0, 0, 255, 0.2)',
-        cardHover: '-5px 8px 2px -1px rgba(0, 0, 255, 0.2)',
-        cardDark: '3px 5px 2px 1px #3E2C41',
-        cardDarkHover: '-5px 8px 2px -1px #3E2C41'
+        searchForm: '-3px -3px 15px #00FFFF',
+        button: '0px 15px 18px -6px rgba(0, 255, 255, 0.65)',
+        buttonHover: '0px 22px 19px -8px #00cbff70'
       }
+    },
+    backgroundImage: {
+      mainBackground: "url('/src/assets/background.jpg')"
     }
   },
   plugins: []

@@ -5,7 +5,6 @@ import {
   AiFillYoutube,
   AiFillGithub
 } from 'react-icons/ai'
-import { BsTwitch } from 'react-icons/bs'
 import { motion } from 'framer-motion'
 
 export default function Footer() {
